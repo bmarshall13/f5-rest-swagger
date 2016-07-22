@@ -12,6 +12,7 @@ import (
 )
 
 type APIClient struct {
+	debug bool
 }
 
 func (c *APIClient) SelectHeaderContentType(contentTypes []string) string {
@@ -54,8 +55,7 @@ func (c *APIClient) CallAPI(path string, method string,
 	fileBytes []byte) (*resty.Response, error) {
 
 	//set debug flag
-	configuration := NewConfiguration()
-	resty.SetDebug(configuration.GetDebug())
+	resty.SetDebug(c.debug)
 
 	request := prepareRequest(postBody, headerParams, queryParams, formParams, fileName, fileBytes)
 

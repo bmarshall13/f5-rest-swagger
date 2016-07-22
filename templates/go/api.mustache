@@ -67,7 +67,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 	queryParams["{{keyParamName}}"] =  a.Configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
 {{/hasKeyParamName}}{{/isKeyInQuery}}{{/isApiKey}}{{#isBasic}}
 	// http basic authentication required
-	if a.Configuration.Username != "" || a.Configuration.Password != ""{
+	if a.Configuration.UserName != "" || a.Configuration.Password != ""{
 		headerParams["Authorization"] =  "Basic " + a.Configuration.GetBasicAuthEncodedString()
 	}{{/isBasic}}{{#isOAuth}}
 	// oauth required
