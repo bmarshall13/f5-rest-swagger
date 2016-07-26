@@ -65,14 +65,7 @@ paths:
         '200':
           description: A list of algLogProfile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/algLogProfile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/algLogProfile_list'
         default:
           description: Error details
           schema:
@@ -226,14 +219,7 @@ paths:
         '200':
           description: A list of auth
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_list'
         default:
           description: Error details
           schema:
@@ -254,14 +240,7 @@ paths:
         '200':
           description: A list of auth_crldpServer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_crldpServer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_crldpServer_list'
         default:
           description: Error details
           schema:
@@ -420,14 +399,7 @@ paths:
         '200':
           description: A list of auth_kerberosDelegation
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_kerberosDelegation'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_kerberosDelegation_list'
         default:
           description: Error details
           schema:
@@ -581,14 +553,7 @@ paths:
         '200':
           description: A list of auth_ldap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_ldap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_ldap_list'
         default:
           description: Error details
           schema:
@@ -742,14 +707,7 @@ paths:
         '200':
           description: A list of auth_ocspResponder
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_ocspResponder'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_ocspResponder_list'
         default:
           description: Error details
           schema:
@@ -903,14 +861,7 @@ paths:
         '200':
           description: A list of auth_profile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_profile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_profile_list'
         default:
           description: Error details
           schema:
@@ -1064,14 +1015,7 @@ paths:
         '200':
           description: A list of auth_radius
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_radius'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_radius_list'
         default:
           description: Error details
           schema:
@@ -1226,14 +1170,7 @@ paths:
         '200':
           description: A list of auth_radiusServer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_radiusServer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_radiusServer_list'
         default:
           description: Error details
           schema:
@@ -1393,14 +1330,7 @@ paths:
         '200':
           description: A list of auth_sslCcLdap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_sslCcLdap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_sslCcLdap_list'
         default:
           description: Error details
           schema:
@@ -1560,14 +1490,7 @@ paths:
         '200':
           description: A list of auth_sslCrldp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_sslCrldp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_sslCrldp_list'
         default:
           description: Error details
           schema:
@@ -1726,14 +1649,7 @@ paths:
         '200':
           description: A list of auth_sslOcsp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_sslOcsp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_sslOcsp_list'
         default:
           description: Error details
           schema:
@@ -1887,14 +1803,7 @@ paths:
         '200':
           description: A list of auth_tacacs
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/auth_tacacs'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/auth_tacacs_list'
         default:
           description: Error details
           schema:
@@ -2073,14 +1982,7 @@ paths:
         '200':
           description: A list of classification
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_list'
         default:
           description: Error details
           schema:
@@ -2100,14 +2002,7 @@ paths:
         '200':
           description: A list of classification_application
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_application'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_application_list'
         default:
           description: Error details
           schema:
@@ -2261,14 +2156,7 @@ paths:
         '200':
           description: A list of classification_category
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_category'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_category_list'
         default:
           description: Error details
           schema:
@@ -2422,14 +2310,7 @@ paths:
         '200':
           description: A list of classification_signatureDefinition
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_signatureDefinition'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_signatureDefinition_list'
         default:
           description: Error details
           schema:
@@ -2503,14 +2384,7 @@ paths:
         '200':
           description: A list of classification_signatureUpdateSchedule
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_signatureUpdateSchedule'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_signatureUpdateSchedule_list'
         default:
           description: Error details
           schema:
@@ -2613,14 +2487,7 @@ paths:
         '200':
           description: A list of classification_signatureVersion
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_signatureVersion'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_signatureVersion_list'
         default:
           description: Error details
           schema:
@@ -2724,14 +2591,7 @@ paths:
         '200':
           description: A list of classification_signatures
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_signatures'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_signatures_list'
         default:
           description: Error details
           schema:
@@ -2782,14 +2642,7 @@ paths:
         '200':
           description: A list of classification_stats
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_stats'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_stats_list'
         default:
           description: Error details
           schema:
@@ -2809,14 +2662,7 @@ paths:
         '200':
           description: A list of classification_stats_application
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_stats_application'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_stats_application_list'
         default:
           description: Error details
           schema:
@@ -2890,14 +2736,7 @@ paths:
         '200':
           description: A list of classification_stats_urlCategory
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_stats_urlCategory'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_stats_urlCategory_list'
         default:
           description: Error details
           schema:
@@ -2996,14 +2835,7 @@ paths:
         '200':
           description: A list of classification_updateSignatures
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_updateSignatures'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_updateSignatures_list'
         default:
           description: Error details
           schema:
@@ -3053,14 +2885,7 @@ paths:
         '200':
           description: A list of classification_urlCatPolicy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_urlCatPolicy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_urlCatPolicy_list'
         default:
           description: Error details
           schema:
@@ -3214,14 +3039,7 @@ paths:
         '200':
           description: A list of classification_urlCategory
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_urlCategory'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_urlCategory_list'
         default:
           description: Error details
           schema:
@@ -3375,14 +3193,7 @@ paths:
         '200':
           description: A list of classification_urldbFeedList
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_urldbFeedList'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_urldbFeedList_list'
         default:
           description: Error details
           schema:
@@ -3536,14 +3347,7 @@ paths:
         '200':
           description: A list of classification_urldbFile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/classification_urldbFile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/classification_urldbFile_list'
         default:
           description: Error details
           schema:
@@ -3723,14 +3527,7 @@ paths:
         '200':
           description: A list of clientssl
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/clientssl'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/clientssl_list'
         default:
           description: Error details
           schema:
@@ -3750,14 +3547,7 @@ paths:
         '200':
           description: A list of clientssl_ocspStaplingResponses
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/clientssl_ocspStaplingResponses'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/clientssl_ocspStaplingResponses_list'
         default:
           description: Error details
           schema:
@@ -3826,14 +3616,7 @@ paths:
         '200':
           description: A list of clientsslProxy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/clientsslProxy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/clientsslProxy_list'
         default:
           description: Error details
           schema:
@@ -3853,14 +3636,7 @@ paths:
         '200':
           description: A list of clientsslProxy_cachedCerts
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/clientsslProxy_cachedCerts'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/clientsslProxy_cachedCerts_list'
         default:
           description: Error details
           schema:
@@ -3952,14 +3728,7 @@ paths:
         '200':
           description: A list of dataGroup
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dataGroup'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dataGroup_list'
         default:
           description: Error details
           schema:
@@ -3979,14 +3748,7 @@ paths:
         '200':
           description: A list of dataGroup_external
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dataGroup_external'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dataGroup_external_list'
         default:
           description: Error details
           schema:
@@ -4140,14 +3902,7 @@ paths:
         '200':
           description: A list of dataGroup_internal
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dataGroup_internal'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dataGroup_internal_list'
         default:
           description: Error details
           schema:
@@ -4326,14 +4081,7 @@ paths:
         '200':
           description: A list of defaultNodeMonitor
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/defaultNodeMonitor'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/defaultNodeMonitor_list'
         default:
           description: Error details
           schema:
@@ -4436,14 +4184,7 @@ paths:
         '200':
           description: A list of dns
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_list'
         default:
           description: Error details
           schema:
@@ -4463,14 +4204,7 @@ paths:
         '200':
           description: A list of dns_analytics
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_analytics'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_analytics_list'
         default:
           description: Error details
           schema:
@@ -4490,14 +4224,7 @@ paths:
         '200':
           description: A list of dns_analytics_globalSettings
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_analytics_globalSettings'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_analytics_globalSettings_list'
         default:
           description: Error details
           schema:
@@ -4625,14 +4352,7 @@ paths:
         '200':
           description: A list of dns_cache
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_list'
         default:
           description: Error details
           schema:
@@ -4652,14 +4372,7 @@ paths:
         '200':
           description: A list of dns_cache_globalSettings
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_globalSettings'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_globalSettings_list'
         default:
           description: Error details
           schema:
@@ -4762,14 +4475,7 @@ paths:
         '200':
           description: A list of dns_cache_records
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_records'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_records_list'
         default:
           description: Error details
           schema:
@@ -4789,14 +4495,7 @@ paths:
         '200':
           description: A list of dns_cache_records_key
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_records_key'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_records_key_list'
         default:
           description: Error details
           schema:
@@ -4863,14 +4562,7 @@ paths:
         '200':
           description: A list of dns_cache_records_msg
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_records_msg'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_records_msg_list'
         default:
           description: Error details
           schema:
@@ -4937,14 +4629,7 @@ paths:
         '200':
           description: A list of dns_cache_records_nameserver
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_records_nameserver'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_records_nameserver_list'
         default:
           description: Error details
           schema:
@@ -5011,14 +4696,7 @@ paths:
         '200':
           description: A list of dns_cache_records_rrset
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_records_rrset'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_records_rrset_list'
         default:
           description: Error details
           schema:
@@ -5110,14 +4788,7 @@ paths:
         '200':
           description: A list of dns_cache_resolver
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_resolver'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_resolver_list'
         default:
           description: Error details
           schema:
@@ -5271,14 +4942,7 @@ paths:
         '200':
           description: A list of dns_cache_transparent
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_transparent'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_transparent_list'
         default:
           description: Error details
           schema:
@@ -5432,14 +5096,7 @@ paths:
         '200':
           description: A list of dns_cache_validatingResolver
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_cache_validatingResolver'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_cache_validatingResolver_list'
         default:
           description: Error details
           schema:
@@ -5618,14 +5275,7 @@ paths:
         '200':
           description: A list of dns_dnsExpressDb
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_dnsExpressDb'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_dnsExpressDb_list'
         default:
           description: Error details
           schema:
@@ -5675,14 +5325,7 @@ paths:
         '200':
           description: A list of dns_dnssec
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_dnssec'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_dnssec_list'
         default:
           description: Error details
           schema:
@@ -5702,14 +5345,7 @@ paths:
         '200':
           description: A list of dns_dnssec_key
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_dnssec_key'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_dnssec_key_list'
         default:
           description: Error details
           schema:
@@ -5729,14 +5365,7 @@ paths:
         '200':
           description: A list of dns_dnssec_key_tmGeneration
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_dnssec_key_tmGeneration'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_dnssec_key_tmGeneration_list'
         default:
           description: Error details
           schema:
@@ -5973,14 +5602,7 @@ paths:
         '200':
           description: A list of dns_dnssec_zone
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_dnssec_zone'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_dnssec_zone_list'
         default:
           description: Error details
           schema:
@@ -6159,14 +5781,7 @@ paths:
         '200':
           description: A list of dns_nameserver
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_nameserver'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_nameserver_list'
         default:
           description: Error details
           schema:
@@ -6320,14 +5935,7 @@ paths:
         '200':
           description: A list of dns_tsigKey
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_tsigKey'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_tsigKey_list'
         default:
           description: Error details
           schema:
@@ -6481,14 +6089,7 @@ paths:
         '200':
           description: A list of dns_zone
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/dns_zone'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/dns_zone_list'
         default:
           description: Error details
           schema:
@@ -6668,14 +6269,7 @@ paths:
         '200':
           description: A list of evictionPolicy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/evictionPolicy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/evictionPolicy_list'
         default:
           description: Error details
           schema:
@@ -6834,14 +6428,7 @@ paths:
         '200':
           description: A list of globalSettings
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/globalSettings'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/globalSettings_list'
         default:
           description: Error details
           schema:
@@ -6861,14 +6448,7 @@ paths:
         '200':
           description: A list of globalSettings_connection
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/globalSettings_connection'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/globalSettings_connection_list'
         default:
           description: Error details
           schema:
@@ -6971,14 +6551,7 @@ paths:
         '200':
           description: A list of globalSettings_general
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/globalSettings_general'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/globalSettings_general_list'
         default:
           description: Error details
           schema:
@@ -7081,14 +6654,7 @@ paths:
         '200':
           description: A list of globalSettings_trafficControl
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/globalSettings_trafficControl'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/globalSettings_trafficControl_list'
         default:
           description: Error details
           schema:
@@ -7216,14 +6782,7 @@ paths:
         '200':
           description: A list of htmlRule
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_list'
         default:
           description: Error details
           schema:
@@ -7243,14 +6802,7 @@ paths:
         '200':
           description: A list of htmlRule_commentRaiseEvent
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_commentRaiseEvent'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_commentRaiseEvent_list'
         default:
           description: Error details
           schema:
@@ -7404,14 +6956,7 @@ paths:
         '200':
           description: A list of htmlRule_commentRemove
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_commentRemove'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_commentRemove_list'
         default:
           description: Error details
           schema:
@@ -7565,14 +7110,7 @@ paths:
         '200':
           description: A list of htmlRule_tagAppendHtml
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_tagAppendHtml'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_tagAppendHtml_list'
         default:
           description: Error details
           schema:
@@ -7726,14 +7264,7 @@ paths:
         '200':
           description: A list of htmlRule_tagPrependHtml
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_tagPrependHtml'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_tagPrependHtml_list'
         default:
           description: Error details
           schema:
@@ -7887,14 +7418,7 @@ paths:
         '200':
           description: A list of htmlRule_tagRaiseEvent
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_tagRaiseEvent'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_tagRaiseEvent_list'
         default:
           description: Error details
           schema:
@@ -8048,14 +7572,7 @@ paths:
         '200':
           description: A list of htmlRule_tagRemove
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_tagRemove'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_tagRemove_list'
         default:
           description: Error details
           schema:
@@ -8209,14 +7726,7 @@ paths:
         '200':
           description: A list of htmlRule_tagRemoveAttribute
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/htmlRule_tagRemoveAttribute'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/htmlRule_tagRemoveAttribute_list'
         default:
           description: Error details
           schema:
@@ -8395,14 +7905,7 @@ paths:
         '200':
           description: A list of ifile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/ifile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/ifile_list'
         default:
           description: Error details
           schema:
@@ -8556,14 +8059,7 @@ paths:
         '200':
           description: A list of lsnLogProfile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/lsnLogProfile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/lsnLogProfile_list'
         default:
           description: Error details
           schema:
@@ -8717,14 +8213,7 @@ paths:
         '200':
           description: A list of lsnPool
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/lsnPool'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/lsnPool_list'
         default:
           description: Error details
           schema:
@@ -8878,14 +8367,7 @@ paths:
         '200':
           description: A list of messageRouting
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_list'
         default:
           description: Error details
           schema:
@@ -8905,14 +8387,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_list'
         default:
           description: Error details
           schema:
@@ -8932,14 +8407,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_peer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_peer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_peer_list'
         default:
           description: Error details
           schema:
@@ -9093,14 +8561,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_profile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_profile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_profile_list'
         default:
           description: Error details
           schema:
@@ -9120,14 +8581,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_profile_router
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_profile_router'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_profile_router_list'
         default:
           description: Error details
           schema:
@@ -9281,14 +8735,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_profile_session
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_profile_session'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_profile_session_list'
         default:
           description: Error details
           schema:
@@ -9467,14 +8914,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_route
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_route'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_route_list'
         default:
           description: Error details
           schema:
@@ -9628,14 +9068,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_transportConfig
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_transportConfig'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_transportConfig_list'
         default:
           description: Error details
           schema:
@@ -9655,14 +9088,7 @@ paths:
         '200':
           description: A list of messageRouting_diameter_transportConfig_profiles
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_diameter_transportConfig_profiles'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_diameter_transportConfig_profiles_list'
         default:
           description: Error details
           schema:
@@ -9975,14 +9401,7 @@ paths:
         '200':
           description: A list of messageRouting_generic
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_list'
         default:
           description: Error details
           schema:
@@ -10002,14 +9421,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_peer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_peer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_peer_list'
         default:
           description: Error details
           schema:
@@ -10163,14 +9575,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_protocol
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_protocol'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_protocol_list'
         default:
           description: Error details
           schema:
@@ -10324,14 +9729,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_route
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_route'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_route_list'
         default:
           description: Error details
           schema:
@@ -10485,14 +9883,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_router
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_router'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_router_list'
         default:
           description: Error details
           schema:
@@ -10646,14 +10037,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_transportConfig
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_transportConfig'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_transportConfig_list'
         default:
           description: Error details
           schema:
@@ -10673,14 +10057,7 @@ paths:
         '200':
           description: A list of messageRouting_generic_transportConfig_profiles
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_generic_transportConfig_profiles'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_generic_transportConfig_profiles_list'
         default:
           description: Error details
           schema:
@@ -10993,14 +10370,7 @@ paths:
         '200':
           description: A list of messageRouting_sip
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_list'
         default:
           description: Error details
           schema:
@@ -11020,14 +10390,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_peer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_peer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_peer_list'
         default:
           description: Error details
           schema:
@@ -11181,14 +10544,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_profile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_profile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_profile_list'
         default:
           description: Error details
           schema:
@@ -11208,14 +10564,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_profile_router
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_profile_router'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_profile_router_list'
         default:
           description: Error details
           schema:
@@ -11369,14 +10718,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_profile_session
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_profile_session'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_profile_session_list'
         default:
           description: Error details
           schema:
@@ -11556,14 +10898,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_route
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_route'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_route_list'
         default:
           description: Error details
           schema:
@@ -11722,14 +11057,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_transportConfig
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_transportConfig'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_transportConfig_list'
         default:
           description: Error details
           schema:
@@ -11749,14 +11077,7 @@ paths:
         '200':
           description: A list of messageRouting_sip_transportConfig_profiles
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/messageRouting_sip_transportConfig_profiles'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/messageRouting_sip_transportConfig_profiles_list'
         default:
           description: Error details
           schema:
@@ -12094,14 +11415,7 @@ paths:
         '200':
           description: A list of monitor
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_list'
         default:
           description: Error details
           schema:
@@ -12121,14 +11435,7 @@ paths:
         '200':
           description: A list of monitor_diameter
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_diameter'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_diameter_list'
         default:
           description: Error details
           schema:
@@ -12282,14 +11589,7 @@ paths:
         '200':
           description: A list of monitor_dns
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_dns'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_dns_list'
         default:
           description: Error details
           schema:
@@ -12443,14 +11743,7 @@ paths:
         '200':
           description: A list of monitor_external
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_external'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_external_list'
         default:
           description: Error details
           schema:
@@ -12604,14 +11897,7 @@ paths:
         '200':
           description: A list of monitor_firepass
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_firepass'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_firepass_list'
         default:
           description: Error details
           schema:
@@ -12765,14 +12051,7 @@ paths:
         '200':
           description: A list of monitor_ftp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_ftp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_ftp_list'
         default:
           description: Error details
           schema:
@@ -12926,14 +12205,7 @@ paths:
         '200':
           description: A list of monitor_gatewayIcmp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_gatewayIcmp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_gatewayIcmp_list'
         default:
           description: Error details
           schema:
@@ -13087,14 +12359,7 @@ paths:
         '200':
           description: A list of monitor_http
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_http'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_http_list'
         default:
           description: Error details
           schema:
@@ -13248,14 +12513,7 @@ paths:
         '200':
           description: A list of monitor_https
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_https'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_https_list'
         default:
           description: Error details
           schema:
@@ -13409,14 +12667,7 @@ paths:
         '200':
           description: A list of monitor_icmp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_icmp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_icmp_list'
         default:
           description: Error details
           schema:
@@ -13570,14 +12821,7 @@ paths:
         '200':
           description: A list of monitor_imap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_imap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_imap_list'
         default:
           description: Error details
           schema:
@@ -13731,14 +12975,7 @@ paths:
         '200':
           description: A list of monitor_inband
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_inband'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_inband_list'
         default:
           description: Error details
           schema:
@@ -13892,14 +13129,7 @@ paths:
         '200':
           description: A list of monitor_ldap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_ldap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_ldap_list'
         default:
           description: Error details
           schema:
@@ -14053,14 +13283,7 @@ paths:
         '200':
           description: A list of monitor_moduleScore
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_moduleScore'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_moduleScore_list'
         default:
           description: Error details
           schema:
@@ -14214,14 +13437,7 @@ paths:
         '200':
           description: A list of monitor_mssql
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_mssql'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_mssql_list'
         default:
           description: Error details
           schema:
@@ -14375,14 +13591,7 @@ paths:
         '200':
           description: A list of monitor_mysql
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_mysql'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_mysql_list'
         default:
           description: Error details
           schema:
@@ -14536,14 +13745,7 @@ paths:
         '200':
           description: A list of monitor_nntp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_nntp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_nntp_list'
         default:
           description: Error details
           schema:
@@ -14697,14 +13899,7 @@ paths:
         '200':
           description: A list of monitor_none
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_none'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_none_list'
         default:
           description: Error details
           schema:
@@ -14858,14 +14053,7 @@ paths:
         '200':
           description: A list of monitor_oracle
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_oracle'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_oracle_list'
         default:
           description: Error details
           schema:
@@ -15019,14 +14207,7 @@ paths:
         '200':
           description: A list of monitor_pop3
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_pop3'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_pop3_list'
         default:
           description: Error details
           schema:
@@ -15180,14 +14361,7 @@ paths:
         '200':
           description: A list of monitor_postgresql
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_postgresql'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_postgresql_list'
         default:
           description: Error details
           schema:
@@ -15341,14 +14515,7 @@ paths:
         '200':
           description: A list of monitor_radius
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_radius'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_radius_list'
         default:
           description: Error details
           schema:
@@ -15502,14 +14669,7 @@ paths:
         '200':
           description: A list of monitor_radiusAccounting
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_radiusAccounting'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_radiusAccounting_list'
         default:
           description: Error details
           schema:
@@ -15663,14 +14823,7 @@ paths:
         '200':
           description: A list of monitor_realServer
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_realServer'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_realServer_list'
         default:
           description: Error details
           schema:
@@ -15824,14 +14977,7 @@ paths:
         '200':
           description: A list of monitor_rpc
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_rpc'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_rpc_list'
         default:
           description: Error details
           schema:
@@ -15985,14 +15131,7 @@ paths:
         '200':
           description: A list of monitor_sasp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_sasp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_sasp_list'
         default:
           description: Error details
           schema:
@@ -16146,14 +15285,7 @@ paths:
         '200':
           description: A list of monitor_scripted
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_scripted'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_scripted_list'
         default:
           description: Error details
           schema:
@@ -16307,14 +15439,7 @@ paths:
         '200':
           description: A list of monitor_sip
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_sip'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_sip_list'
         default:
           description: Error details
           schema:
@@ -16468,14 +15593,7 @@ paths:
         '200':
           description: A list of monitor_smb
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_smb'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_smb_list'
         default:
           description: Error details
           schema:
@@ -16629,14 +15747,7 @@ paths:
         '200':
           description: A list of monitor_smtp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_smtp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_smtp_list'
         default:
           description: Error details
           schema:
@@ -16790,14 +15901,7 @@ paths:
         '200':
           description: A list of monitor_snmpDca
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_snmpDca'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_snmpDca_list'
         default:
           description: Error details
           schema:
@@ -16951,14 +16055,7 @@ paths:
         '200':
           description: A list of monitor_snmpDcaBase
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_snmpDcaBase'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_snmpDcaBase_list'
         default:
           description: Error details
           schema:
@@ -17112,14 +16209,7 @@ paths:
         '200':
           description: A list of monitor_soap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_soap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_soap_list'
         default:
           description: Error details
           schema:
@@ -17273,14 +16363,7 @@ paths:
         '200':
           description: A list of monitor_tcp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_tcp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_tcp_list'
         default:
           description: Error details
           schema:
@@ -17434,14 +16517,7 @@ paths:
         '200':
           description: A list of monitor_tcpEcho
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_tcpEcho'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_tcpEcho_list'
         default:
           description: Error details
           schema:
@@ -17595,14 +16671,7 @@ paths:
         '200':
           description: A list of monitor_tcpHalfOpen
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_tcpHalfOpen'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_tcpHalfOpen_list'
         default:
           description: Error details
           schema:
@@ -17756,14 +16825,7 @@ paths:
         '200':
           description: A list of monitor_udp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_udp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_udp_list'
         default:
           description: Error details
           schema:
@@ -17917,14 +16979,7 @@ paths:
         '200':
           description: A list of monitor_virtualLocation
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_virtualLocation'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_virtualLocation_list'
         default:
           description: Error details
           schema:
@@ -18078,14 +17133,7 @@ paths:
         '200':
           description: A list of monitor_wap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_wap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_wap_list'
         default:
           description: Error details
           schema:
@@ -18239,14 +17287,7 @@ paths:
         '200':
           description: A list of monitor_wmi
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/monitor_wmi'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/monitor_wmi_list'
         default:
           description: Error details
           schema:
@@ -18425,14 +17466,7 @@ paths:
         '200':
           description: A list of nat
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/nat'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/nat_list'
         default:
           description: Error details
           schema:
@@ -18586,14 +17620,7 @@ paths:
         '200':
           description: A list of node
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/node'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/node_list'
         default:
           description: Error details
           schema:
@@ -18747,14 +17774,7 @@ paths:
         '200':
           description: A list of persistence
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_list'
         default:
           description: Error details
           schema:
@@ -18774,14 +17794,7 @@ paths:
         '200':
           description: A list of persistence_cookie
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_cookie'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_cookie_list'
         default:
           description: Error details
           schema:
@@ -18936,14 +17949,7 @@ paths:
         '200':
           description: A list of persistence_destAddr
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_destAddr'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_destAddr_list'
         default:
           description: Error details
           schema:
@@ -19102,14 +18108,7 @@ paths:
         '200':
           description: A list of persistence_globalSettings
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_globalSettings'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_globalSettings_list'
         default:
           description: Error details
           schema:
@@ -19212,14 +18211,7 @@ paths:
         '200':
           description: A list of persistence_hash
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_hash'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_hash_list'
         default:
           description: Error details
           schema:
@@ -19374,14 +18366,7 @@ paths:
         '200':
           description: A list of persistence_msrdp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_msrdp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_msrdp_list'
         default:
           description: Error details
           schema:
@@ -19540,14 +18525,7 @@ paths:
         '200':
           description: A list of persistence_persistRecords
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_persistRecords'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_persistRecords_list'
         default:
           description: Error details
           schema:
@@ -19614,14 +18592,7 @@ paths:
         '200':
           description: A list of persistence_sip
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_sip'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_sip_list'
         default:
           description: Error details
           schema:
@@ -19775,14 +18746,7 @@ paths:
         '200':
           description: A list of persistence_sourceAddr
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_sourceAddr'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_sourceAddr_list'
         default:
           description: Error details
           schema:
@@ -19936,14 +18900,7 @@ paths:
         '200':
           description: A list of persistence_ssl
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_ssl'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_ssl_list'
         default:
           description: Error details
           schema:
@@ -20097,14 +19054,7 @@ paths:
         '200':
           description: A list of persistence_universal
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/persistence_universal'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/persistence_universal_list'
         default:
           description: Error details
           schema:
@@ -20283,14 +19233,7 @@ paths:
         '200':
           description: A list of policy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policy_list'
         default:
           description: Error details
           schema:
@@ -20310,14 +19253,7 @@ paths:
         '200':
           description: A list of policy_rules
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policy_rules'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policy_rules_list'
         default:
           description: Error details
           schema:
@@ -20337,14 +19273,7 @@ paths:
         '200':
           description: A list of policy_rules_actions
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policy_rules_actions'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policy_rules_actions_list'
         default:
           description: Error details
           schema:
@@ -20498,14 +19427,7 @@ paths:
         '200':
           description: A list of policy_rules_conditions
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policy_rules_conditions'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policy_rules_conditions_list'
         default:
           description: Error details
           schema:
@@ -20927,14 +19849,7 @@ paths:
         '200':
           description: A list of policyStrategy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policyStrategy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policyStrategy_list'
         default:
           description: Error details
           schema:
@@ -20954,14 +19869,7 @@ paths:
         '200':
           description: A list of policyStrategy_operands
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/policyStrategy_operands'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/policyStrategy_operands_list'
         default:
           description: Error details
           schema:
@@ -21249,14 +20157,7 @@ paths:
         '200':
           description: A list of pool
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/pool'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/pool_list'
         default:
           description: Error details
           schema:
@@ -21416,14 +20317,7 @@ paths:
         '200':
           description: A list of pool_members
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/pool_members'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/pool_members_list'
         default:
           description: Error details
           schema:
@@ -21607,14 +20501,7 @@ paths:
         '200':
           description: A list of profile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_list'
         default:
           description: Error details
           schema:
@@ -21634,14 +20521,7 @@ paths:
         '200':
           description: A list of profile_analytics
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_analytics'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_analytics_list'
         default:
           description: Error details
           schema:
@@ -21662,14 +20542,7 @@ paths:
         '200':
           description: A list of profile_analytics_alerts
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_analytics_alerts'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_analytics_alerts_list'
         default:
           description: Error details
           schema:
@@ -21829,14 +20702,7 @@ paths:
         '200':
           description: A list of profile_analytics_trafficCapture
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_analytics_trafficCapture'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_analytics_trafficCapture_list'
         default:
           description: Error details
           schema:
@@ -22129,14 +20995,7 @@ paths:
         '200':
           description: A list of profile_certificateAuthority
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_certificateAuthority'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_certificateAuthority_list'
         default:
           description: Error details
           schema:
@@ -22290,14 +21149,7 @@ paths:
         '200':
           description: A list of profile_classification
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_classification'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_classification_list'
         default:
           description: Error details
           schema:
@@ -22400,14 +21252,7 @@ paths:
         '200':
           description: A list of profile_clientLdap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_clientLdap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_clientLdap_list'
         default:
           description: Error details
           schema:
@@ -22561,14 +21406,7 @@ paths:
         '200':
           description: A list of profile_clientSsl
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_clientSsl'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_clientSsl_list'
         default:
           description: Error details
           schema:
@@ -22723,14 +21561,7 @@ paths:
         '200':
           description: A list of profile_dhcpv4
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_dhcpv4'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_dhcpv4_list'
         default:
           description: Error details
           schema:
@@ -22890,14 +21721,7 @@ paths:
         '200':
           description: A list of profile_dhcpv6
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_dhcpv6'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_dhcpv6_list'
         default:
           description: Error details
           schema:
@@ -23056,14 +21880,7 @@ paths:
         '200':
           description: A list of profile_diameter
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_diameter'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_diameter_list'
         default:
           description: Error details
           schema:
@@ -23217,14 +22034,7 @@ paths:
         '200':
           description: A list of profile_dns
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_dns'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_dns_list'
         default:
           description: Error details
           schema:
@@ -23378,14 +22188,7 @@ paths:
         '200':
           description: A list of profile_dnsLogging
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_dnsLogging'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_dnsLogging_list'
         default:
           description: Error details
           schema:
@@ -23539,14 +22342,7 @@ paths:
         '200':
           description: A list of profile_fasthttp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_fasthttp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_fasthttp_list'
         default:
           description: Error details
           schema:
@@ -23700,14 +22496,7 @@ paths:
         '200':
           description: A list of profile_fastl4
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_fastl4'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_fastl4_list'
         default:
           description: Error details
           schema:
@@ -23861,14 +22650,7 @@ paths:
         '200':
           description: A list of profile_fix
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_fix'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_fix_list'
         default:
           description: Error details
           schema:
@@ -24022,14 +22804,7 @@ paths:
         '200':
           description: A list of profile_ftp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_ftp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_ftp_list'
         default:
           description: Error details
           schema:
@@ -24183,14 +22958,7 @@ paths:
         '200':
           description: A list of profile_gtp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_gtp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_gtp_list'
         default:
           description: Error details
           schema:
@@ -24344,14 +23112,7 @@ paths:
         '200':
           description: A list of profile_html
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_html'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_html_list'
         default:
           description: Error details
           schema:
@@ -24505,14 +23266,7 @@ paths:
         '200':
           description: A list of profile_http
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_http'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_http_list'
         default:
           description: Error details
           schema:
@@ -24666,14 +23420,7 @@ paths:
         '200':
           description: A list of profile_http2
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_http2'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_http2_list'
         default:
           description: Error details
           schema:
@@ -24827,14 +23574,7 @@ paths:
         '200':
           description: A list of profile_httpCompression
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_httpCompression'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_httpCompression_list'
         default:
           description: Error details
           schema:
@@ -24989,14 +23729,7 @@ paths:
         '200':
           description: A list of profile_icap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_icap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_icap_list'
         default:
           description: Error details
           schema:
@@ -25155,14 +23888,7 @@ paths:
         '200':
           description: A list of profile_iiop
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_iiop'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_iiop_list'
         default:
           description: Error details
           schema:
@@ -25317,14 +24043,7 @@ paths:
         '200':
           description: A list of profile_ipother
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_ipother'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_ipother_list'
         default:
           description: Error details
           schema:
@@ -25483,14 +24202,7 @@ paths:
         '200':
           description: A list of profile_mblb
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_mblb'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_mblb_list'
         default:
           description: Error details
           schema:
@@ -25644,14 +24356,7 @@ paths:
         '200':
           description: A list of profile_mssql
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_mssql'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_mssql_list'
         default:
           description: Error details
           schema:
@@ -25805,14 +24510,7 @@ paths:
         '200':
           description: A list of profile_ntlm
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_ntlm'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_ntlm_list'
         default:
           description: Error details
           schema:
@@ -25967,14 +24665,7 @@ paths:
         '200':
           description: A list of profile_ocspStaplingParams
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_ocspStaplingParams'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_ocspStaplingParams_list'
         default:
           description: Error details
           schema:
@@ -26133,14 +24824,7 @@ paths:
         '200':
           description: A list of profile_oneConnect
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_oneConnect'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_oneConnect_list'
         default:
           description: Error details
           schema:
@@ -26294,14 +24978,7 @@ paths:
         '200':
           description: A list of profile_pcp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_pcp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_pcp_list'
         default:
           description: Error details
           schema:
@@ -26456,14 +25133,7 @@ paths:
         '200':
           description: A list of profile_pptp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_pptp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_pptp_list'
         default:
           description: Error details
           schema:
@@ -26622,14 +25292,7 @@ paths:
         '200':
           description: A list of profile_qoe
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_qoe'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_qoe_list'
         default:
           description: Error details
           schema:
@@ -26783,14 +25446,7 @@ paths:
         '200':
           description: A list of profile_radius
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_radius'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_radius_list'
         default:
           description: Error details
           schema:
@@ -26944,14 +25600,7 @@ paths:
         '200':
           description: A list of profile_ramcache
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_ramcache'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_ramcache_list'
         default:
           description: Error details
           schema:
@@ -27018,14 +25667,7 @@ paths:
         '200':
           description: A list of profile_requestAdapt
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_requestAdapt'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_requestAdapt_list'
         default:
           description: Error details
           schema:
@@ -27179,14 +25821,7 @@ paths:
         '200':
           description: A list of profile_requestLog
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_requestLog'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_requestLog_list'
         default:
           description: Error details
           schema:
@@ -27340,14 +25975,7 @@ paths:
         '200':
           description: A list of profile_responseAdapt
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_responseAdapt'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_responseAdapt_list'
         default:
           description: Error details
           schema:
@@ -27501,14 +26129,7 @@ paths:
         '200':
           description: A list of profile_rewrite
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_rewrite'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_rewrite_list'
         default:
           description: Error details
           schema:
@@ -27528,14 +26149,7 @@ paths:
         '200':
           description: A list of profile_rewrite_uriRules
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_rewrite_uriRules'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_rewrite_uriRules_list'
         default:
           description: Error details
           schema:
@@ -27823,14 +26437,7 @@ paths:
         '200':
           description: A list of profile_rtsp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_rtsp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_rtsp_list'
         default:
           description: Error details
           schema:
@@ -27984,14 +26591,7 @@ paths:
         '200':
           description: A list of profile_sctp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_sctp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_sctp_list'
         default:
           description: Error details
           schema:
@@ -28145,14 +26745,7 @@ paths:
         '200':
           description: A list of profile_serverLdap
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_serverLdap'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_serverLdap_list'
         default:
           description: Error details
           schema:
@@ -28306,14 +26899,7 @@ paths:
         '200':
           description: A list of profile_serverSsl
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_serverSsl'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_serverSsl_list'
         default:
           description: Error details
           schema:
@@ -28467,14 +27053,7 @@ paths:
         '200':
           description: A list of profile_sip
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_sip'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_sip_list'
         default:
           description: Error details
           schema:
@@ -28628,14 +27207,7 @@ paths:
         '200':
           description: A list of profile_smtp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_smtp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_smtp_list'
         default:
           description: Error details
           schema:
@@ -28789,14 +27361,7 @@ paths:
         '200':
           description: A list of profile_smtps
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_smtps'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_smtps_list'
         default:
           description: Error details
           schema:
@@ -28950,14 +27515,7 @@ paths:
         '200':
           description: A list of profile_socks
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_socks'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_socks_list'
         default:
           description: Error details
           schema:
@@ -29111,14 +27669,7 @@ paths:
         '200':
           description: A list of profile_spdy
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_spdy'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_spdy_list'
         default:
           description: Error details
           schema:
@@ -29272,14 +27823,7 @@ paths:
         '200':
           description: A list of profile_statistics
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_statistics'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_statistics_list'
         default:
           description: Error details
           schema:
@@ -29433,14 +27977,7 @@ paths:
         '200':
           description: A list of profile_stream
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_stream'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_stream_list'
         default:
           description: Error details
           schema:
@@ -29594,14 +28131,7 @@ paths:
         '200':
           description: A list of profile_tcp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_tcp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_tcp_list'
         default:
           description: Error details
           schema:
@@ -29755,14 +28285,7 @@ paths:
         '200':
           description: A list of profile_tftp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_tftp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_tftp_list'
         default:
           description: Error details
           schema:
@@ -29916,14 +28439,7 @@ paths:
         '200':
           description: A list of profile_udp
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_udp'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_udp_list'
         default:
           description: Error details
           schema:
@@ -30077,14 +28593,7 @@ paths:
         '200':
           description: A list of profile_waCache
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_waCache'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_waCache_list'
         default:
           description: Error details
           schema:
@@ -30127,14 +28636,7 @@ paths:
         '200':
           description: A list of profile_webAcceleration
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_webAcceleration'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_webAcceleration_list'
         default:
           description: Error details
           schema:
@@ -30288,14 +28790,7 @@ paths:
         '200':
           description: A list of profile_webSecurity
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_webSecurity'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_webSecurity_list'
         default:
           description: Error details
           schema:
@@ -30369,14 +28864,7 @@ paths:
         '200':
           description: A list of profile_xml
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/profile_xml'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/profile_xml_list'
         default:
           description: Error details
           schema:
@@ -30555,14 +29043,7 @@ paths:
         '200':
           description: A list of rule
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/rule'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/rule_list'
         default:
           description: Error details
           schema:
@@ -30716,14 +29197,7 @@ paths:
         '200':
           description: A list of snat
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/snat'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/snat_list'
         default:
           description: Error details
           schema:
@@ -30877,14 +29351,7 @@ paths:
         '200':
           description: A list of snatTranslation
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/snatTranslation'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/snatTranslation_list'
         default:
           description: Error details
           schema:
@@ -31038,14 +29505,7 @@ paths:
         '200':
           description: A list of snatpool
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/snatpool'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/snatpool_list'
         default:
           description: Error details
           schema:
@@ -31199,14 +29659,7 @@ paths:
         '200':
           description: A list of tacdb
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/tacdb'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/tacdb_list'
         default:
           description: Error details
           schema:
@@ -31226,14 +29679,7 @@ paths:
         '200':
           description: A list of tacdb_customdb
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/tacdb_customdb'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/tacdb_customdb_list'
         default:
           description: Error details
           schema:
@@ -31388,14 +29834,7 @@ paths:
         '200':
           description: A list of tacdb_customdbFile
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/tacdb_customdbFile'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/tacdb_customdbFile_list'
         default:
           description: Error details
           schema:
@@ -31579,14 +30018,7 @@ paths:
         '200':
           description: A list of trafficClass
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/trafficClass'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/trafficClass_list'
         default:
           description: Error details
           schema:
@@ -31740,14 +30172,7 @@ paths:
         '200':
           description: A list of urlcatQuery
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/urlcatQuery'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/urlcatQuery_list'
         default:
           description: Error details
           schema:
@@ -31792,14 +30217,7 @@ paths:
         '200':
           description: A list of virtual
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_list'
         default:
           description: Error details
           schema:
@@ -31819,14 +30237,7 @@ paths:
         '200':
           description: A list of virtual_fwActive
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual_fwActive'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_fwActive_list'
         default:
           description: Error details
           schema:
@@ -31871,14 +30282,7 @@ paths:
         '200':
           description: A list of virtual_fwEnforcedPolicyRules
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual_fwEnforcedPolicyRules'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_fwEnforcedPolicyRules_list'
         default:
           description: Error details
           schema:
@@ -31952,14 +30356,7 @@ paths:
         '200':
           description: A list of virtual_fwStagedPolicyRules
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual_fwStagedPolicyRules'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_fwStagedPolicyRules_list'
         default:
           description: Error details
           schema:
@@ -32033,14 +30430,7 @@ paths:
         '200':
           description: A list of virtual_policies
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual_policies'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_policies_list'
         default:
           description: Error details
           schema:
@@ -32194,14 +30584,7 @@ paths:
         '200':
           description: A list of virtual_profiles
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtual_profiles'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtual_profiles_list'
         default:
           description: Error details
           schema:
@@ -32489,14 +30872,7 @@ paths:
         '200':
           description: A list of virtualAddress
           schema:
-            properties:
-              items:
-                items:
-                  $ref: '#/definitions/virtualAddress'
-                type: array
-              kind:
-                type: string
-            type: object
+            $ref: '#/definitions/virtualAddress_list'
         default:
           description: Error details
           schema:
@@ -32700,6 +31076,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  algLogProfile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/algLogProfile'
+        type: array
+      kind:
+        type: string
   algLogProfile_startControlChannel:
     properties:
       action:
@@ -32820,6 +31204,14 @@ definitions:
           C=US,ST=WA,L=SEA,OU=F5,CN=xxx. The default value is disabled.
         type: string
     type: object
+  auth_crldpServer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_crldpServer'
+        type: array
+      kind:
+        type: string
   auth_kerberosDelegation:
     properties:
       appService:
@@ -32865,6 +31257,14 @@ definitions:
     - serverPrincipal
     - clientPrincipal
     type: object
+  auth_kerberosDelegation_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_kerberosDelegation'
+        type: array
+      kind:
+        type: string
   auth_ldap:
     properties:
       appService:
@@ -33022,6 +31422,22 @@ definitions:
     required:
     - servers
     type: object
+  auth_ldap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_ldap'
+        type: array
+      kind:
+        type: string
+  auth_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth'
+        type: array
+      kind:
+        type: string
   auth_ocspResponder:
     properties:
       allowCerts:
@@ -33178,6 +31594,14 @@ definitions:
           Use this option for testing purposes only. The default value is enabled.
         type: string
     type: object
+  auth_ocspResponder_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_ocspResponder'
+        type: array
+      kind:
+        type: string
   auth_profile:
     properties:
       appService:
@@ -33245,6 +31669,14 @@ definitions:
     - configuration
     - defaultsFrom
     type: object
+  auth_profile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_profile'
+        type: array
+      kind:
+        type: string
   auth_radius:
     properties:
       accountingBug:
@@ -33335,6 +31767,22 @@ definitions:
     - secret
     - server
     type: object
+  auth_radiusServer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_radiusServer'
+        type: array
+      kind:
+        type: string
+  auth_radius_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_radius'
+        type: array
+      kind:
+        type: string
   auth_sslCcLdap:
     properties:
       adminDn:
@@ -33469,6 +31917,14 @@ definitions:
     - userKey
     - servers
     type: object
+  auth_sslCcLdap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_sslCcLdap'
+        type: array
+      kind:
+        type: string
   auth_sslCrldp:
     properties:
       appService:
@@ -33515,6 +31971,14 @@ definitions:
           from the client certificate. The default value is disabled.
         type: string
     type: object
+  auth_sslCrldp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_sslCrldp'
+        type: array
+      kind:
+        type: string
   auth_sslOcsp:
     properties:
       appService:
@@ -33534,6 +31998,14 @@ definitions:
         description: Displays the partition within which the server resides.
         type: string
     type: object
+  auth_sslOcsp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_sslOcsp'
+        type: array
+      kind:
+        type: string
   auth_tacacs:
     properties:
       accounting:
@@ -33602,6 +32074,14 @@ definitions:
     - secret
     - servers
     type: object
+  auth_tacacs_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/auth_tacacs'
+        type: array
+      kind:
+        type: string
   classification:
     properties:
       application:
@@ -33674,6 +32154,14 @@ definitions:
         description: Enables application to be classified or not.
         type: string
     type: object
+  classification_application_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_application'
+        type: array
+      kind:
+        type: string
   classification_category:
     properties:
       appService:
@@ -33705,6 +32193,22 @@ definitions:
         description: Enables category to be classified or not.
         type: string
     type: object
+  classification_category_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_category'
+        type: array
+      kind:
+        type: string
+  classification_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification'
+        type: array
+      kind:
+        type: string
   classification_signatureDefinition:
     properties:
       kind:
@@ -33751,6 +32255,14 @@ definitions:
           file.
         type: string
     type: object
+  classification_signatureDefinition_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_signatureDefinition'
+        type: array
+      kind:
+        type: string
   classification_signatureUpdateSchedule:
     properties:
       autoUpdateDisabled:
@@ -33776,6 +32288,14 @@ definitions:
         description: Displays the administrative partition.
         type: string
     type: object
+  classification_signatureUpdateSchedule_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_signatureUpdateSchedule'
+        type: array
+      kind:
+        type: string
   classification_signatureVersion:
     properties:
       cecFilename:
@@ -33806,8 +32326,24 @@ definitions:
       updatedTime:
         type: string
     type: object
+  classification_signatureVersion_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_signatureVersion'
+        type: array
+      kind:
+        type: string
   classification_signatures:
     type: string
+  classification_signatures_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_signatures'
+        type: array
+      kind:
+        type: string
   classification_stats:
     properties:
       application:
@@ -33825,8 +32361,32 @@ definitions:
     type: object
   classification_stats_application:
     type: string
+  classification_stats_application_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_stats_application'
+        type: array
+      kind:
+        type: string
+  classification_stats_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_stats'
+        type: array
+      kind:
+        type: string
   classification_stats_urlCategory:
     type: string
+  classification_stats_urlCategory_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_stats_urlCategory'
+        type: array
+      kind:
+        type: string
   classification_updateSignatures:
     properties:
       file:
@@ -33838,6 +32398,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  classification_updateSignatures_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_updateSignatures'
+        type: array
+      kind:
+        type: string
   classification_urlCatPolicy:
     properties:
       appService:
@@ -33858,6 +32426,14 @@ definitions:
           resides.
         type: string
     type: object
+  classification_urlCatPolicy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_urlCatPolicy'
+        type: array
+      kind:
+        type: string
   classification_urlCategory:
     properties:
       appService:
@@ -33882,6 +32458,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  classification_urlCategory_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_urlCategory'
+        type: array
+      kind:
+        type: string
   classification_urldbFeedList:
     properties:
       appService:
@@ -33920,6 +32504,14 @@ definitions:
         description: username for customdb url location authentication
         type: string
     type: object
+  classification_urldbFeedList_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_urldbFeedList'
+        type: array
+      kind:
+        type: string
   classification_urldbFile:
     properties:
       appService:
@@ -33979,6 +32571,14 @@ definitions:
         description: Specifies the user by which this file object was last updated.
         type: string
     type: object
+  classification_urldbFile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/classification_urldbFile'
+        type: array
+      kind:
+        type: string
   clientssl:
     properties:
       kind:
@@ -34018,6 +32618,30 @@ definitions:
         description: Specifies the virtual server name
         type: string
     type: object
+  clientsslProxy_cachedCerts_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/clientsslProxy_cachedCerts'
+        type: array
+      kind:
+        type: string
+  clientsslProxy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/clientsslProxy'
+        type: array
+      kind:
+        type: string
+  clientssl_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/clientssl'
+        type: array
+      kind:
+        type: string
   clientssl_ocspStaplingResponses:
     properties:
       clientsslProfile:
@@ -34033,6 +32657,14 @@ definitions:
         description: Specifies the virtual server name.
         type: string
     type: object
+  clientssl_ocspStaplingResponses_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/clientssl_ocspStaplingResponses'
+        type: array
+      kind:
+        type: string
   dataGroup:
     properties:
       external:
@@ -34074,6 +32706,14 @@ definitions:
           with source-path option. It can be ip, string, or integer.
         type: string
     type: object
+  dataGroup_external_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dataGroup_external'
+        type: array
+      kind:
+        type: string
   dataGroup_external_records:
     properties:
       appService:
@@ -34113,6 +32753,14 @@ definitions:
     required:
     - type
     type: object
+  dataGroup_internal_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dataGroup_internal'
+        type: array
+      kind:
+        type: string
   dataGroup_internal_records:
     properties:
       appService:
@@ -34127,6 +32775,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  dataGroup_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dataGroup'
+        type: array
+      kind:
+        type: string
   defaultNodeMonitor:
     properties:
       kind:
@@ -34140,6 +32796,14 @@ definitions:
           a monitor rule.
         type: string
     type: object
+  defaultNodeMonitor_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/defaultNodeMonitor'
+        type: array
+      kind:
+        type: string
   dns:
     properties:
       dnsExpressDb:
@@ -34192,6 +32856,22 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  dns_analytics_globalSettings_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_analytics_globalSettings'
+        type: array
+      kind:
+        type: string
+  dns_analytics_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_analytics'
+        type: array
+      kind:
+        type: string
   dns_cache:
     properties:
       globalSettings:
@@ -34239,6 +32919,22 @@ definitions:
         format: int64
         type: integer
     type: object
+  dns_cache_globalSettings_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_globalSettings'
+        type: array
+      kind:
+        type: string
+  dns_cache_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache'
+        type: array
+      kind:
+        type: string
   dns_cache_records:
     properties:
       key:
@@ -34285,6 +32981,22 @@ definitions:
         format: int64
         type: integer
     type: object
+  dns_cache_records_key_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_records_key'
+        type: array
+      kind:
+        type: string
+  dns_cache_records_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_records'
+        type: array
+      kind:
+        type: string
   dns_cache_records_msg:
     properties:
       cache:
@@ -34314,6 +33026,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  dns_cache_records_msg_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_records_msg'
+        type: array
+      kind:
+        type: string
   dns_cache_records_nameserver:
     properties:
       address:
@@ -34356,6 +33076,14 @@ definitions:
         description: Filter results by zone name.
         type: string
     type: object
+  dns_cache_records_nameserver_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_records_nameserver'
+        type: array
+      kind:
+        type: string
   dns_cache_records_rrset:
     properties:
       cache:
@@ -34390,6 +33118,14 @@ definitions:
         description: Record type to filter on.
         type: string
     type: object
+  dns_cache_records_rrset_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_records_rrset'
+        type: array
+      kind:
+        type: string
   dns_cache_resolver:
     properties:
       allowedQueryTime:
@@ -34516,6 +33252,14 @@ definitions:
           Cache Forward Zone
         type: string
     type: object
+  dns_cache_resolver_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_resolver'
+        type: array
+      kind:
+        type: string
   dns_cache_resolver_responsePolicyZones:
     properties:
       action:
@@ -34585,6 +33329,14 @@ definitions:
         default: cache-resolver
         type: string
     type: object
+  dns_cache_transparent_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_transparent'
+        type: array
+      kind:
+        type: string
   dns_cache_transparent_responsePolicyZones:
     properties:
       action:
@@ -34760,6 +33512,14 @@ definitions:
           Cache Forward Zone
         type: string
     type: object
+  dns_cache_validatingResolver_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_cache_validatingResolver'
+        type: array
+      kind:
+        type: string
   dns_cache_validatingResolver_responsePolicyZones:
     properties:
       action:
@@ -34789,6 +33549,14 @@ definitions:
     type: object
   dns_dnsExpressDb:
     type: string
+  dns_dnsExpressDb_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_dnsExpressDb'
+        type: array
+      kind:
+        type: string
   dns_dnssec:
     properties:
       key:
@@ -34886,6 +33654,14 @@ definitions:
           is none.  Optionally external or internal.
         type: string
     type: object
+  dns_dnssec_key_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_dnssec_key'
+        type: array
+      kind:
+        type: string
   dns_dnssec_key_tmGeneration:
     properties:
       appService:
@@ -34922,6 +33698,22 @@ definitions:
           key.
         type: string
     type: object
+  dns_dnssec_key_tmGeneration_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_dnssec_key_tmGeneration'
+        type: array
+      kind:
+        type: string
+  dns_dnssec_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_dnssec'
+        type: array
+      kind:
+        type: string
   dns_dnssec_zone:
     properties:
       appService:
@@ -34975,6 +33767,22 @@ definitions:
         format: uint64
         type: number
     type: object
+  dns_dnssec_zone_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_dnssec_zone'
+        type: array
+      kind:
+        type: string
+  dns_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns'
+        type: array
+      kind:
+        type: string
   dns_nameserver:
     properties:
       address:
@@ -35004,6 +33812,14 @@ definitions:
         description: Specifies the TSIG key associated with the nameserver.
         type: string
     type: object
+  dns_nameserver_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_nameserver'
+        type: array
+      kind:
+        type: string
   dns_tsigKey:
     properties:
       algorithm:
@@ -35023,6 +33839,14 @@ definitions:
         description: TSIG key secret text generated by compatible key generation tool.
         type: string
     type: object
+  dns_tsigKey_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_tsigKey'
+        type: array
+      kind:
+        type: string
   dns_zone:
     properties:
       appService:
@@ -35072,6 +33896,14 @@ definitions:
         description: Specifies the TSIG key associated with the DNS zone.
         type: string
     type: object
+  dns_zone_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/dns_zone'
+        type: array
+      kind:
+        type: string
   error_model:
     properties:
       code:
@@ -35117,6 +33949,14 @@ definitions:
         default: Common
         type: string
     type: object
+  evictionPolicy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/evictionPolicy'
+        type: array
+      kind:
+        type: string
   evictionPolicy_slowFlow:
     properties:
       enabled:
@@ -35253,6 +34093,14 @@ definitions:
           The default setting is enable.
         type: string
     type: object
+  globalSettings_connection_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/globalSettings_connection'
+        type: array
+      kind:
+        type: string
   globalSettings_general:
     properties:
       gratuitousArpRate:
@@ -35292,6 +34140,22 @@ definitions:
         description: Enables or disables SNAT packet forwarding. The default is disable.
         type: string
     type: object
+  globalSettings_general_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/globalSettings_general'
+        type: array
+      kind:
+        type: string
+  globalSettings_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/globalSettings'
+        type: array
+      kind:
+        type: string
   globalSettings_trafficControl:
     properties:
       acceptIpOptions:
@@ -35383,6 +34247,14 @@ definitions:
           silently drops the unmatched packet. The default is enable.
         type: string
     type: object
+  globalSettings_trafficControl_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/globalSettings_trafficControl'
+        type: array
+      kind:
+        type: string
   htmlRule:
     properties:
       commentRaiseEvent:
@@ -35422,6 +34294,14 @@ definitions:
         default: Common
         type: string
     type: object
+  htmlRule_commentRaiseEvent_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_commentRaiseEvent'
+        type: array
+      kind:
+        type: string
   htmlRule_commentRemove:
     properties:
       appService:
@@ -35438,6 +34318,22 @@ definitions:
         default: Common
         type: string
     type: object
+  htmlRule_commentRemove_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_commentRemove'
+        type: array
+      kind:
+        type: string
+  htmlRule_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule'
+        type: array
+      kind:
+        type: string
   htmlRule_tagAppendHtml:
     properties:
       appService:
@@ -35465,6 +34361,14 @@ definitions:
       text:
         type: string
     type: object
+  htmlRule_tagAppendHtml_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_tagAppendHtml'
+        type: array
+      kind:
+        type: string
   htmlRule_tagAppendHtml_match:
     properties:
       attributeName:
@@ -35507,6 +34411,14 @@ definitions:
       text:
         type: string
     type: object
+  htmlRule_tagPrependHtml_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_tagPrependHtml'
+        type: array
+      kind:
+        type: string
   htmlRule_tagPrependHtml_match:
     properties:
       attributeName:
@@ -35538,6 +34450,14 @@ definitions:
         default: Common
         type: string
     type: object
+  htmlRule_tagRaiseEvent_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_tagRaiseEvent'
+        type: array
+      kind:
+        type: string
   htmlRule_tagRaiseEvent_match:
     properties:
       attributeName:
@@ -35596,6 +34516,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  htmlRule_tagRemoveAttribute_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_tagRemoveAttribute'
+        type: array
+      kind:
+        type: string
   htmlRule_tagRemoveAttribute_match:
     properties:
       attributeName:
@@ -35611,6 +34539,14 @@ definitions:
       tagName:
         type: string
     type: object
+  htmlRule_tagRemove_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/htmlRule_tagRemove'
+        type: array
+      kind:
+        type: string
   htmlRule_tagRemove_match:
     properties:
       attributeName:
@@ -35648,6 +34584,14 @@ definitions:
     required:
     - fileName
     type: object
+  ifile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/ifile'
+        type: array
+      kind:
+        type: string
   loginBody:
     properties:
       loginProviderName:
@@ -35736,6 +34680,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  lsnLogProfile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/lsnLogProfile'
+        type: array
+      kind:
+        type: string
   lsnLogProfile_quotaExceeded:
     properties:
       action:
@@ -35841,6 +34793,14 @@ definitions:
         description: Configures the port range used for translated addresses.
         type: string
     type: object
+  lsnPool_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/lsnPool'
+        type: array
+      kind:
+        type: string
   lsnPool_pcp:
     properties:
       dslite:
@@ -35958,6 +34918,14 @@ definitions:
         description: Defines the configuration for an outgoing connection.
         type: string
     type: object
+  messageRouting_diameter_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_peer:
     properties:
       appService:
@@ -36004,6 +34972,14 @@ definitions:
           creating an outgoing connection.
         type: string
     type: object
+  messageRouting_diameter_peer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_peer'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_profile:
     properties:
       kind:
@@ -36019,6 +34995,14 @@ definitions:
         description: Configures a Diameter Session profile.
         type: string
     type: object
+  messageRouting_diameter_profile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_profile'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_profile_router:
     properties:
       appService:
@@ -36070,6 +35054,14 @@ definitions:
           The default value is enabled.
         type: string
     type: object
+  messageRouting_diameter_profile_router_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_profile_router'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_profile_session:
     properties:
       acctApplicationId:
@@ -36188,6 +35180,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  messageRouting_diameter_profile_session_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_profile_session'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_route:
     properties:
       appService:
@@ -36233,6 +35233,14 @@ definitions:
           any client.
         type: string
     type: object
+  messageRouting_diameter_route_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_route'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_transportConfig:
     properties:
       appService:
@@ -36264,6 +35272,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  messageRouting_diameter_transportConfig_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_transportConfig'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_transportConfig_profiles:
     properties:
       context:
@@ -36276,6 +35292,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  messageRouting_diameter_transportConfig_profiles_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_diameter_transportConfig_profiles'
+        type: array
+      kind:
+        type: string
   messageRouting_diameter_transportConfig_sourceAddressTranslation:
     properties:
       kind:
@@ -36318,6 +35342,14 @@ definitions:
         description: Defines the configuration for an outgoing connection.
         type: string
     type: object
+  messageRouting_generic_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_peer:
     properties:
       appService:
@@ -36364,6 +35396,14 @@ definitions:
           creating an outgoing connection.
         type: string
     type: object
+  messageRouting_generic_peer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_peer'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_protocol:
     properties:
       appService:
@@ -36418,6 +35458,14 @@ definitions:
         default: Common
         type: string
     type: object
+  messageRouting_generic_protocol_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_protocol'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_route:
     properties:
       appService:
@@ -36449,6 +35497,14 @@ definitions:
           is not present, it will be treated as a wildcard matching all message source-addresses.
         type: string
     type: object
+  messageRouting_generic_route_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_route'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_router:
     properties:
       appService:
@@ -36510,6 +35566,14 @@ definitions:
           a peer.
         type: string
     type: object
+  messageRouting_generic_router_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_router'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_transportConfig:
     properties:
       appService:
@@ -36541,6 +35605,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  messageRouting_generic_transportConfig_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_transportConfig'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_transportConfig_profiles:
     properties:
       context:
@@ -36553,6 +35625,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  messageRouting_generic_transportConfig_profiles_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_generic_transportConfig_profiles'
+        type: array
+      kind:
+        type: string
   messageRouting_generic_transportConfig_sourceAddressTranslation:
     properties:
       kind:
@@ -36571,6 +35651,14 @@ definitions:
           the specified transport config.
         type: string
     type: object
+  messageRouting_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting'
+        type: array
+      kind:
+        type: string
   messageRouting_sip:
     properties:
       kind:
@@ -36590,6 +35678,14 @@ definitions:
         description: Defines the configuration for an outgoing connection.
         type: string
     type: object
+  messageRouting_sip_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_peer:
     properties:
       appService:
@@ -36636,6 +35732,14 @@ definitions:
           creating an outgoing connection.
         type: string
     type: object
+  messageRouting_sip_peer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_peer'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_profile:
     properties:
       kind:
@@ -36651,6 +35755,14 @@ definitions:
         description: Configures a Session Initiation Protocol (SIP) Session profile.
         type: string
     type: object
+  messageRouting_sip_profile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_profile'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_profile_router:
     properties:
       appService:
@@ -36697,6 +35809,14 @@ definitions:
           by the incoming request, rather than other connections.
         type: string
     type: object
+  messageRouting_sip_profile_router_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_profile_router'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_profile_router_session:
     properties:
       kind:
@@ -36790,6 +35910,14 @@ definitions:
         default: Common
         type: string
     type: object
+  messageRouting_sip_profile_session_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_profile_session'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_profile_session_persistence:
     properties:
       kind:
@@ -36854,6 +35982,14 @@ definitions:
           to this route.
         type: string
     type: object
+  messageRouting_sip_route_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_route'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_transportConfig:
     properties:
       appService:
@@ -36885,6 +36021,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  messageRouting_sip_transportConfig_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_transportConfig'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_transportConfig_profiles:
     properties:
       context:
@@ -36897,6 +36041,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  messageRouting_sip_transportConfig_profiles_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/messageRouting_sip_transportConfig_profiles'
+        type: array
+      kind:
+        type: string
   messageRouting_sip_transportConfig_sourceAddressTranslation:
     properties:
       kind:
@@ -37138,6 +36290,14 @@ definitions:
         description: The vendor id for a vendor-specific Diameter Application.
         type: string
     type: object
+  monitor_diameter_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_diameter'
+        type: array
+      kind:
+        type: string
   monitor_dns:
     properties:
       acceptRcode:
@@ -37273,6 +36433,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_dns_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_dns'
+        type: array
+      kind:
+        type: string
   monitor_external:
     properties:
       appService:
@@ -37352,6 +36520,14 @@ definitions:
           list of user-defined parameters.
         type: string
     type: object
+  monitor_external_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_external'
+        type: array
+      kind:
+        type: string
   monitor_firepass:
     properties:
       appService:
@@ -37439,6 +36615,14 @@ definitions:
         description: Specifies the username, if the monitored target requires authentication.
         type: string
     type: object
+  monitor_firepass_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_firepass'
+        type: array
+      kind:
+        type: string
   monitor_ftp:
     properties:
       adaptive:
@@ -37547,6 +36731,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_ftp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_ftp'
+        type: array
+      kind:
+        type: string
   monitor_gatewayIcmp:
     properties:
       adaptive:
@@ -37653,6 +36845,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_gatewayIcmp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_gatewayIcmp'
+        type: array
+      kind:
+        type: string
   monitor_http:
     properties:
       adaptive:
@@ -37805,6 +37005,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_http_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_http'
+        type: array
+      kind:
+        type: string
   monitor_https:
     properties:
       adaptive:
@@ -37976,6 +37184,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_https_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_https'
+        type: array
+      kind:
+        type: string
   monitor_icmp:
     properties:
       adaptive:
@@ -38079,6 +37295,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_icmp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_icmp'
+        type: array
+      kind:
+        type: string
   monitor_imap:
     properties:
       appService:
@@ -38163,6 +37387,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_imap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_imap'
+        type: array
+      kind:
+        type: string
   monitor_inband:
     properties:
       appService:
@@ -38216,6 +37448,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_inband_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_inband'
+        type: array
+      kind:
+        type: string
   monitor_ldap:
     properties:
       appService:
@@ -38324,6 +37564,22 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_ldap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_ldap'
+        type: array
+      kind:
+        type: string
+  monitor_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor'
+        type: array
+      kind:
+        type: string
   monitor_moduleScore:
     properties:
       appService:
@@ -38405,6 +37661,14 @@ definitions:
     required:
     - snmpIpAddress
     type: object
+  monitor_moduleScore_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_moduleScore'
+        type: array
+      kind:
+        type: string
   monitor_mssql:
     properties:
       appService:
@@ -38520,6 +37784,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_mssql_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_mssql'
+        type: array
+      kind:
+        type: string
   monitor_mysql:
     properties:
       appService:
@@ -38635,6 +37907,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_mysql_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_mysql'
+        type: array
+      kind:
+        type: string
   monitor_nntp:
     properties:
       appService:
@@ -38719,6 +37999,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_nntp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_nntp'
+        type: array
+      kind:
+        type: string
   monitor_none:
     properties:
       appService:
@@ -38763,6 +38051,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_none_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_none'
+        type: array
+      kind:
+        type: string
   monitor_oracle:
     properties:
       appService:
@@ -38879,6 +38175,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_oracle_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_oracle'
+        type: array
+      kind:
+        type: string
   monitor_pop3:
     properties:
       appService:
@@ -38959,6 +38263,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_pop3_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_pop3'
+        type: array
+      kind:
+        type: string
   monitor_postgresql:
     properties:
       appService:
@@ -39074,6 +38386,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_postgresql_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_postgresql'
+        type: array
+      kind:
+        type: string
   monitor_radius:
     properties:
       appService:
@@ -39249,6 +38569,22 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_radiusAccounting_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_radiusAccounting'
+        type: array
+      kind:
+        type: string
+  monitor_radius_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_radius'
+        type: array
+      kind:
+        type: string
   monitor_realServer:
     properties:
       agent:
@@ -39311,6 +38647,14 @@ definitions:
           on available commands. You cannot modify the command.
         type: string
     type: object
+  monitor_realServer_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_realServer'
+        type: array
+      kind:
+        type: string
   monitor_rpc:
     properties:
       appService:
@@ -39400,6 +38744,14 @@ definitions:
           you want the monitor to verify availability.
         type: string
     type: object
+  monitor_rpc_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_rpc'
+        type: array
+      kind:
+        type: string
   monitor_sasp:
     properties:
       appService:
@@ -39468,6 +38820,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_sasp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_sasp'
+        type: array
+      kind:
+        type: string
   monitor_scripted:
     properties:
       appService:
@@ -39547,6 +38907,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_scripted_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_scripted'
+        type: array
+      kind:
+        type: string
   monitor_sip:
     properties:
       appService:
@@ -39670,6 +39038,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_sip_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_sip'
+        type: array
+      kind:
+        type: string
   monitor_smb:
     properties:
       appService:
@@ -39768,6 +39144,14 @@ definitions:
           The default value is none.
         type: string
     type: object
+  monitor_smb_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_smb'
+        type: array
+      kind:
+        type: string
   monitor_smtp:
     properties:
       appService:
@@ -39845,6 +39229,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_smtp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_smtp'
+        type: array
+      kind:
+        type: string
   monitor_snmpDca:
     properties:
       agentType:
@@ -40006,6 +39398,22 @@ definitions:
         description: Specifies the version of SNMP that the host server uses.
         type: string
     type: object
+  monitor_snmpDcaBase_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_snmpDcaBase'
+        type: array
+      kind:
+        type: string
+  monitor_snmpDca_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_snmpDca'
+        type: array
+      kind:
+        type: string
   monitor_soap:
     properties:
       appService:
@@ -40127,6 +39535,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_soap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_soap'
+        type: array
+      kind:
+        type: string
   monitor_tcp:
     properties:
       adaptive:
@@ -40375,6 +39791,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_tcpEcho_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_tcpEcho'
+        type: array
+      kind:
+        type: string
   monitor_tcpHalfOpen:
     properties:
       appService:
@@ -40448,6 +39872,22 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_tcpHalfOpen_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_tcpHalfOpen'
+        type: array
+      kind:
+        type: string
+  monitor_tcp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_tcp'
+        type: array
+      kind:
+        type: string
   monitor_udp:
     properties:
       adaptive:
@@ -40585,6 +40025,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_udp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_udp'
+        type: array
+      kind:
+        type: string
   monitor_virtualLocation:
     properties:
       appService:
@@ -40653,6 +40101,14 @@ definitions:
     required:
     - pool
     type: object
+  monitor_virtualLocation_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_virtualLocation'
+        type: array
+      kind:
+        type: string
   monitor_wap:
     properties:
       accountingNode:
@@ -40775,6 +40231,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  monitor_wap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_wap'
+        type: array
+      kind:
+        type: string
   monitor_wmi:
     properties:
       agent:
@@ -40859,6 +40323,14 @@ definitions:
         description: Specifies the user name if the monitored target requires authentication.
         type: string
     type: object
+  monitor_wmi_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/monitor_wmi'
+        type: array
+      kind:
+        type: string
   nat:
     properties:
       appService:
@@ -40921,6 +40393,14 @@ definitions:
     - translationAddress
     - originatingAddress
     type: object
+  nat_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/nat'
+        type: array
+      kind:
+        type: string
   node:
     properties:
       address:
@@ -41025,6 +40505,14 @@ definitions:
         description: Specifies the fully qualified domain name of the node.
         type: string
     type: object
+  node_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/node'
+        type: array
+      kind:
+        type: string
   node_metadata:
     properties:
       appService:
@@ -41194,6 +40682,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_cookie_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_cookie'
+        type: array
+      kind:
+        type: string
   persistence_destAddr:
     properties:
       appService:
@@ -41262,6 +40758,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_destAddr_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_destAddr'
+        type: array
+      kind:
+        type: string
   persistence_globalSettings:
     properties:
       description:
@@ -41290,6 +40794,14 @@ definitions:
           of the requests from a single source address during a persistence session.
         type: string
     type: object
+  persistence_globalSettings_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_globalSettings'
+        type: array
+      kind:
+        type: string
   persistence_hash:
     properties:
       appService:
@@ -41391,6 +40903,22 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_hash_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_hash'
+        type: array
+      kind:
+        type: string
+  persistence_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence'
+        type: array
+      kind:
+        type: string
   persistence_msrdp:
     properties:
       appService:
@@ -41453,6 +40981,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_msrdp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_msrdp'
+        type: array
+      kind:
+        type: string
   persistence_persistRecords:
     properties:
       clientAddr:
@@ -41489,6 +41025,14 @@ definitions:
           remains persistent.
         type: string
     type: object
+  persistence_persistRecords_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_persistRecords'
+        type: array
+      kind:
+        type: string
   persistence_sip:
     properties:
       appService:
@@ -41551,6 +41095,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_sip_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_sip'
+        type: array
+      kind:
+        type: string
   persistence_sourceAddr:
     properties:
       appService:
@@ -41631,6 +41183,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_sourceAddr_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_sourceAddr'
+        type: array
+      kind:
+        type: string
   persistence_ssl:
     properties:
       appService:
@@ -41689,6 +41249,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_ssl_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_ssl'
+        type: array
+      kind:
+        type: string
   persistence_universal:
     properties:
       appService:
@@ -41750,6 +41318,14 @@ definitions:
           value is 180 seconds.
         type: string
     type: object
+  persistence_universal_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/persistence_universal'
+        type: array
+      kind:
+        type: string
   policy:
     properties:
       appService:
@@ -41795,6 +41371,14 @@ definitions:
         description: Specifies the rule selection strategy
         type: string
     type: object
+  policyStrategy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policyStrategy'
+        type: array
+      kind:
+        type: string
   policyStrategy_operands:
     properties:
       all:
@@ -41976,6 +41560,22 @@ definitions:
         description: Match on a particular VLAN id.
         type: boolean
     type: object
+  policyStrategy_operands_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policyStrategy_operands'
+        type: array
+      kind:
+        type: string
+  policy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policy'
+        type: array
+      kind:
+        type: string
   policy_rules:
     properties:
       appService:
@@ -42293,6 +41893,14 @@ definitions:
         description: This action will write a value.
         type: boolean
     type: object
+  policy_rules_actions_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policy_rules_actions'
+        type: array
+      kind:
+        type: string
   policy_rules_conditions:
     properties:
       address:
@@ -42545,6 +42153,22 @@ definitions:
         description: Matches on a VLAN id.
         type: boolean
     type: object
+  policy_rules_conditions_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policy_rules_conditions'
+        type: array
+      kind:
+        type: string
+  policy_rules_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/policy_rules'
+        type: array
+      kind:
+        type: string
   pool:
     properties:
       allowNat:
@@ -42703,6 +42327,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  pool_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/pool'
+        type: array
+      kind:
+        type: string
   pool_members:
     properties:
       address:
@@ -42795,6 +42427,14 @@ definitions:
       tmName:
         type: string
     type: object
+  pool_members_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/pool_members'
+        type: array
+      kind:
+        type: string
   pool_members_metadata:
     properties:
       appService:
@@ -43170,6 +42810,22 @@ definitions:
           metric.
         type: string
     type: object
+  profile_analytics_alerts_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_analytics_alerts'
+        type: array
+      kind:
+        type: string
+  profile_analytics_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_analytics'
+        type: array
+      kind:
+        type: string
   profile_analytics_subnetMasks:
     properties:
       appService:
@@ -43253,6 +42909,14 @@ definitions:
           which to capture traffic.
         type: string
     type: object
+  profile_analytics_trafficCapture_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_analytics_trafficCapture'
+        type: array
+      kind:
+        type: string
   profile_certificateAuthority:
     properties:
       appService:
@@ -43300,6 +42964,14 @@ definitions:
         description: Automatically updates the CRL file.
         type: string
     type: object
+  profile_certificateAuthority_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_certificateAuthority'
+        type: array
+      kind:
+        type: string
   profile_classification:
     properties:
       description:
@@ -43319,6 +42991,14 @@ definitions:
       smtpServer:
         type: string
     type: object
+  profile_classification_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_classification'
+        type: array
+      kind:
+        type: string
   profile_clientLdap:
     properties:
       activationMode:
@@ -43348,6 +43028,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_clientLdap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_clientLdap'
+        type: array
+      kind:
+        type: string
   profile_clientSsl:
     properties:
       alertTimeout:
@@ -43676,6 +43364,14 @@ definitions:
         description: Specifies the key passphrase if required.
         type: string
     type: object
+  profile_clientSsl_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_clientSsl'
+        type: array
+      kind:
+        type: string
   profile_dhcpv4:
     properties:
       appService:
@@ -43761,6 +43457,14 @@ definitions:
         description: Specifies the authentication virtual server name.
         type: string
     type: object
+  profile_dhcpv4_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_dhcpv4'
+        type: array
+      kind:
+        type: string
   profile_dhcpv4_relayAgentId:
     properties:
       add:
@@ -43861,6 +43565,14 @@ definitions:
         description: Specifies the authentication virtual server name.
         type: string
     type: object
+  profile_dhcpv6_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_dhcpv6'
+        type: array
+      kind:
+        type: string
   profile_dhcpv6_remoteIdOption:
     properties:
       add:
@@ -44055,6 +43767,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_diameter_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_diameter'
+        type: array
+      kind:
+        type: string
   profile_dns:
     properties:
       appService:
@@ -44228,6 +43948,22 @@ definitions:
         default: Common
         type: string
     type: object
+  profile_dnsLogging_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_dnsLogging'
+        type: array
+      kind:
+        type: string
+  profile_dns_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_dns'
+        type: array
+      kind:
+        type: string
   profile_fasthttp:
     properties:
       appService:
@@ -44408,6 +44144,14 @@ definitions:
           client attempts to send further data after the response has completed.
         type: string
     type: object
+  profile_fasthttp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_fasthttp'
+        type: array
+      kind:
+        type: string
   profile_fastl4:
     properties:
       appService:
@@ -44651,6 +44395,14 @@ definitions:
           for selecting the back-end servers.
         type: string
     type: object
+  profile_fastl4_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_fastl4'
+        type: array
+      kind:
+        type: string
   profile_fix:
     properties:
       appService:
@@ -44709,6 +44461,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_fix_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_fix'
+        type: array
+      kind:
+        type: string
   profile_ftp:
     properties:
       allowFtps:
@@ -44768,6 +44528,14 @@ definitions:
           with IPv4 servers.
         type: string
     type: object
+  profile_ftp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_ftp'
+        type: array
+      kind:
+        type: string
   profile_gtp:
     properties:
       appService:
@@ -44799,6 +44567,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_gtp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_gtp'
+        type: array
+      kind:
+        type: string
   profile_html:
     properties:
       appService:
@@ -44830,6 +44606,14 @@ definitions:
         default: Common
         type: string
     type: object
+  profile_html_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_html'
+        type: array
+      kind:
+        type: string
   profile_http:
     properties:
       acceptXff:
@@ -45048,6 +44832,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_http2_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_http2'
+        type: array
+      kind:
+        type: string
   profile_httpCompression:
     properties:
       allowHttp_10:
@@ -45162,6 +44954,14 @@ definitions:
           server responses. The default value is enabled.
         type: string
     type: object
+  profile_httpCompression_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_httpCompression'
+        type: array
+      kind:
+        type: string
   profile_http_enforcement:
     properties:
       excessClientHeaders:
@@ -45310,6 +45110,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  profile_http_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_http'
+        type: array
+      kind:
+        type: string
   profile_http_sflow:
     properties:
       kind:
@@ -45389,6 +45197,14 @@ definitions:
           Please refer to RFC 3507 section 4.3.2
         type: string
     type: object
+  profile_icap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_icap'
+        type: array
+      kind:
+        type: string
   profile_iiop:
     properties:
       abortOnTimeout:
@@ -45436,6 +45252,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_iiop_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_iiop'
+        type: array
+      kind:
+        type: string
   profile_ipother:
     properties:
       appService:
@@ -45465,6 +45289,22 @@ definitions:
           resides.
         type: string
     type: object
+  profile_ipother_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_ipother'
+        type: array
+      kind:
+        type: string
+  profile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile'
+        type: array
+      kind:
+        type: string
   profile_mblb:
     properties:
       appService:
@@ -45527,6 +45367,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_mblb_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_mblb'
+        type: array
+      kind:
+        type: string
   profile_mssql:
     properties:
       appService:
@@ -45586,6 +45434,14 @@ definitions:
           sends requests that are not read-only
         type: string
     type: object
+  profile_mssql_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_mssql'
+        type: array
+      kind:
+        type: string
   profile_ntlm:
     properties:
       appService:
@@ -45643,6 +45499,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  profile_ntlm_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_ntlm'
+        type: array
+      kind:
+        type: string
   profile_ocspStaplingParams:
     properties:
       appService:
@@ -45741,6 +45605,14 @@ definitions:
           be used for making the connection to the OCSP responder.
         type: string
     type: object
+  profile_ocspStaplingParams_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_ocspStaplingParams'
+        type: array
+      kind:
+        type: string
   profile_oneConnect:
     properties:
       appService:
@@ -45808,6 +45680,14 @@ definitions:
           the same client IP address.
         type: string
     type: object
+  profile_oneConnect_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_oneConnect'
+        type: array
+      kind:
+        type: string
   profile_pcp:
     properties:
       announceAfterFailover:
@@ -45898,6 +45778,14 @@ definitions:
           mappings on behalf of third parties). Default disable.
         type: string
     type: object
+  profile_pcp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_pcp'
+        type: array
+      kind:
+        type: string
   profile_pptp:
     properties:
       appService:
@@ -45926,6 +45814,14 @@ definitions:
       publisherName:
         type: string
     type: object
+  profile_pptp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_pptp'
+        type: array
+      kind:
+        type: string
   profile_qoe:
     properties:
       appService:
@@ -45952,6 +45848,14 @@ definitions:
         description: Enable/disable video QoE to true or false.
         type: string
     type: object
+  profile_qoe_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_qoe'
+        type: array
+      kind:
+        type: string
   profile_radius:
     properties:
       appService:
@@ -45999,6 +45903,14 @@ definitions:
           packets.
         type: string
     type: object
+  profile_radius_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_radius'
+        type: array
+      kind:
+        type: string
   profile_ramcache:
     properties:
       exact:
@@ -46017,6 +45929,14 @@ definitions:
       uri:
         type: string
     type: object
+  profile_ramcache_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_ramcache'
+        type: array
+      kind:
+        type: string
   profile_requestAdapt:
     properties:
       allowHttp_10:
@@ -46076,6 +45996,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_requestAdapt_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_requestAdapt'
+        type: array
+      kind:
+        type: string
   profile_requestLog:
     properties:
       appService:
@@ -46188,6 +46116,14 @@ definitions:
           the client.
         type: string
     type: object
+  profile_requestLog_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_requestLog'
+        type: array
+      kind:
+        type: string
   profile_responseAdapt:
     properties:
       allowHttp_10:
@@ -46247,6 +46183,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_responseAdapt_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_responseAdapt'
+        type: array
+      kind:
+        type: string
   profile_rewrite:
     properties:
       appService:
@@ -46294,6 +46238,14 @@ definitions:
         default: 'false'
         type: string
     type: object
+  profile_rewrite_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_rewrite'
+        type: array
+      kind:
+        type: string
   profile_rewrite_request:
     properties:
       insertXforwardedFor:
@@ -46398,6 +46350,14 @@ definitions:
       scheme:
         type: string
     type: object
+  profile_rewrite_uriRules_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_rewrite_uriRules'
+        type: array
+      kind:
+        type: string
   profile_rewrite_uriRules_server:
     properties:
       host:
@@ -46519,6 +46479,14 @@ definitions:
           to stream data. The default value is disabled.
         type: string
     type: object
+  profile_rtsp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_rtsp'
+        type: array
+      kind:
+        type: string
   profile_sctp:
     properties:
       appService:
@@ -46676,6 +46644,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_sctp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_sctp'
+        type: array
+      kind:
+        type: string
   profile_serverLdap:
     properties:
       activationMode:
@@ -46705,6 +46681,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_serverLdap_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_serverLdap'
+        type: array
+      kind:
+        type: string
   profile_serverSsl:
     properties:
       alertTimeout:
@@ -46927,6 +46911,14 @@ definitions:
           error and continue.
         type: string
     type: object
+  profile_serverSsl_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_serverSsl'
+        type: array
+      kind:
+        type: string
   profile_sip:
     properties:
       algEnable:
@@ -47064,6 +47056,14 @@ definitions:
         description: The header that is inserted if insert-via-header is enabled.
         type: string
     type: object
+  profile_sip_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_sip'
+        type: array
+      kind:
+        type: string
   profile_smtp:
     properties:
       appService:
@@ -47086,6 +47086,14 @@ definitions:
         description: Specifies whether secure SMTP is enabled.
         type: string
     type: object
+  profile_smtp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_smtp'
+        type: array
+      kind:
+        type: string
   profile_smtps:
     properties:
       activationMode:
@@ -47115,6 +47123,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_smtps_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_smtps'
+        type: array
+      kind:
+        type: string
   profile_socks:
     properties:
       appService:
@@ -47164,6 +47180,14 @@ definitions:
           SOCKS service.
         type: string
     type: object
+  profile_socks_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_socks'
+        type: array
+      kind:
+        type: string
   profile_spdy:
     properties:
       activationMode:
@@ -47255,6 +47279,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_spdy_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_spdy'
+        type: array
+      kind:
+        type: string
   profile_statistics:
     properties:
       appService:
@@ -47374,6 +47406,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_statistics_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_statistics'
+        type: array
+      kind:
+        type: string
   profile_stream:
     properties:
       appService:
@@ -47407,6 +47447,14 @@ definitions:
           none.
         type: string
     type: object
+  profile_stream_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_stream'
+        type: array
+      kind:
+        type: string
   profile_tcp:
     properties:
       abc:
@@ -47829,6 +47877,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  profile_tcp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_tcp'
+        type: array
+      kind:
+        type: string
   profile_tftp:
     properties:
       appService:
@@ -47867,6 +47923,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_tftp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_tftp'
+        type: array
+      kind:
+        type: string
   profile_udp:
     properties:
       allowNoPayload:
@@ -47930,8 +47994,24 @@ definitions:
         description: Make the system use the same max segment size on both ends.
         type: string
     type: object
+  profile_udp_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_udp'
+        type: array
+      kind:
+        type: string
   profile_waCache:
     type: string
+  profile_waCache_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_waCache'
+        type: array
+      kind:
+        type: string
   profile_webAcceleration:
     properties:
       appService:
@@ -48028,6 +48108,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_webAcceleration_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_webAcceleration'
+        type: array
+      kind:
+        type: string
   profile_webSecurity:
     properties:
       defaultsFrom:
@@ -48047,6 +48135,14 @@ definitions:
           resides.
         type: string
     type: object
+  profile_webSecurity_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_webSecurity'
+        type: array
+      kind:
+        type: string
   profile_xml:
     properties:
       appService:
@@ -48084,6 +48180,14 @@ definitions:
           A match of any of the queries will trigger an iRule event.
         type: string
     type: object
+  profile_xml_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/profile_xml'
+        type: array
+      kind:
+        type: string
   rule:
     properties:
       action:
@@ -48123,6 +48227,14 @@ definitions:
         description: The private key to use for signing the iRule.
         type: string
     type: object
+  rule_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/rule'
+        type: array
+      kind:
+        type: string
   rule_metadata:
     properties:
       appService:
@@ -48269,6 +48381,22 @@ definitions:
         format: int64
         type: integer
     type: object
+  snatTranslation_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/snatTranslation'
+        type: array
+      kind:
+        type: string
+  snat_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/snat'
+        type: array
+      kind:
+        type: string
   snat_metadata:
     properties:
       appService:
@@ -48319,6 +48447,14 @@ definitions:
           resides.
         type: string
     type: object
+  snatpool_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/snatpool'
+        type: array
+      kind:
+        type: string
   tacdb:
     properties:
       customdb:
@@ -48412,6 +48548,30 @@ definitions:
       updatedBy:
         type: string
     type: object
+  tacdb_customdbFile_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/tacdb_customdbFile'
+        type: array
+      kind:
+        type: string
+  tacdb_customdb_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/tacdb_customdb'
+        type: array
+      kind:
+        type: string
+  tacdb_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/tacdb'
+        type: array
+      kind:
+        type: string
   trafficClass:
     properties:
       appService:
@@ -48458,8 +48618,24 @@ definitions:
         format: int64
         type: integer
     type: object
+  trafficClass_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/trafficClass'
+        type: array
+      kind:
+        type: string
   urlcatQuery:
     type: string
+  urlcatQuery_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/urlcatQuery'
+        type: array
+      kind:
+        type: string
   virtual:
     properties:
       addressStatus:
@@ -48784,6 +48960,14 @@ definitions:
         format: int64
         type: integer
     type: object
+  virtualAddress_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtualAddress'
+        type: array
+      kind:
+        type: string
   virtualAddress_metadata:
     properties:
       appService:
@@ -48976,6 +49160,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  virtual_fwActive_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual_fwActive'
+        type: array
+      kind:
+        type: string
   virtual_fwActive_source:
     properties:
       addressLists:
@@ -49222,6 +49414,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  virtual_fwEnforcedPolicyRules_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual_fwEnforcedPolicyRules'
+        type: array
+      kind:
+        type: string
   virtual_fwEnforcedPolicyRules_source:
     properties:
       addressLists:
@@ -49468,6 +49668,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  virtual_fwStagedPolicyRules_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual_fwStagedPolicyRules'
+        type: array
+      kind:
+        type: string
   virtual_fwStagedPolicyRules_source:
     properties:
       addressLists:
@@ -49552,6 +49760,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  virtual_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual'
+        type: array
+      kind:
+        type: string
   virtual_metadata:
     properties:
       appService:
@@ -49590,6 +49806,14 @@ definitions:
     type: object
   virtual_policies:
     type: string
+  virtual_policies_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual_policies'
+        type: array
+      kind:
+        type: string
   virtual_profiles:
     properties:
       context:
@@ -49602,6 +49826,14 @@ definitions:
         description: Name of entity
         type: string
     type: object
+  virtual_profiles_list:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/virtual_profiles'
+        type: array
+      kind:
+        type: string
   virtual_sourceAddressTranslation:
     properties:
       kind:
