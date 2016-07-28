@@ -53,7 +53,7 @@ func (c *Configuration) GetAPIKeyWithPrefix(APIKeyIdentifier string) string {
 
 func (c *Configuration) SetDebug(enable bool) {
 	c.debug = enable
-	c.APIClient.debug = enable
+	c.APIClient.Resty.SetDebug(enable)
 }
 
 func (c *Configuration) GetDebug() bool {

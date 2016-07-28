@@ -13,24 +13,13 @@ import (
 )
 
 type {{classname}} struct {
-	Configuration Configuration
+	configuration *Configuration
 }
 
-func New{{classname}}() *{{classname}} {
-	configuration := NewConfiguration()
-	return &{{classname}}{
-		Configuration: *configuration,
-	}
+func unused_import_hack_{{classname}}() {
+	strings.Replace("a", "a", fmt.Sprintf("%v", nil), -1)
 }
 
-func New{{classname}}WithBasePath(basePath string) *{{classname}} {
-	configuration := NewConfiguration()
-	configuration.BasePath = basePath
-
-	return &{{classname}}{
-		Configuration: *configuration,
-	}
-}
 {{#operation}}
 
 /**
@@ -44,7 +33,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 
 	var httpMethod = "{{httpMethod}}"
 	// create path and map variables
-	path := a.Configuration.BasePath + "{{path}}"{{#pathParams}}
+	path := a.configuration.BasePath + "{{path}}"{{#pathParams}}
 	path = strings.Replace(path, "{"+"{{baseName}}"+"}", fmt.Sprintf("%v", {{paramName}}), -1){{/pathParams}}
 {{#allParams}}{{#required}}
 	// verify the required parameter '{{paramName}}' is set
@@ -62,22 +51,22 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 	// authentication ({{name}}) required
 {{#isApiKey}}{{#isKeyInHeader}}
 	// set key with prefix in header
-	headerParams["{{keyParamName}}"] = a.Configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
+	headerParams["{{keyParamName}}"] = a.configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
 {{/isKeyInHeader}}{{#isKeyInQuery}}
 	// set key with prefix in querystring{{#hasKeyParamName}}
-	queryParams["{{keyParamName}}"] =  a.Configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
+	queryParams["{{keyParamName}}"] =  a.configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
 {{/hasKeyParamName}}{{/isKeyInQuery}}{{/isApiKey}}{{#isBasic}}
 	// http basic authentication required
-	if a.Configuration.UserName != "" || a.Configuration.Password != ""{
-		headerParams["Authorization"] =  "Basic " + a.Configuration.GetBasicAuthEncodedString()
+	if a.configuration.UserName != "" || a.configuration.Password != ""{
+		headerParams["Authorization"] =  "Basic " + a.configuration.GetBasicAuthEncodedString()
 	}{{/isBasic}}{{#isOAuth}}
 	// oauth required
-	if a.Configuration.AccessToken != ""{
-		headerParams["Authorization"] =  "Bearer " + a.Configuration.AccessToken
+	if a.configuration.AccessToken != ""{
+		headerParams["Authorization"] =  "Bearer " + a.configuration.AccessToken
 	}{{/isOAuth}}{{/authMethods}}
 	// add default headers if any
-	for key := range a.Configuration.DefaultHeader {
-		headerParams[key] = a.Configuration.DefaultHeader[key]
+	for key := range a.configuration.DefaultHeader {
+		headerParams[key] = a.configuration.DefaultHeader[key]
 	}
 	{{#hasQueryParams}}
 	{{#queryParams}}
@@ -88,11 +77,11 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 			queryParams.Add("{{paramName}}", value)
 		}
 	} else {
-		queryParams.Add("{{paramName}}", a.Configuration.APIClient.ParameterToString({{paramName}}, collectionFormat))
+		queryParams.Add("{{paramName}}", a.configuration.APIClient.ParameterToString({{paramName}}, collectionFormat))
 	}
 	{{/isListContainer}}
 	{{^isListContainer}}
-		queryParams.Add("{{paramName}}", a.Configuration.APIClient.ParameterToString({{paramName}}, ""))
+		queryParams.Add("{{paramName}}", a.configuration.APIClient.ParameterToString({{paramName}}, ""))
 	{{/isListContainer}}
 	{{/queryParams}}{{/hasQueryParams}}
 
@@ -103,7 +92,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 {{/consumes}}	}
 
 	// set Content-Type header
-	localVarHttpContentType := a.Configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
+	localVarHttpContentType := a.configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
 	if localVarHttpContentType != "" {
 		headerParams["Content-Type"] = localVarHttpContentType
 	}
@@ -113,7 +102,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 {{/produces}}	}
 
 	// set Accept header
-	localVarHttpHeaderAccept := a.Configuration.APIClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
+	localVarHttpHeaderAccept := a.configuration.APIClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}{{#hasHeaderParams}}
@@ -130,7 +119,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 	postBody = &{{paramName}}
 {{/bodyParams}}{{/hasBodyParam}}
 {{#returnType}}	var successPayload = new({{returnType}}){{/returnType}}
-	httpResponse, err := a.Configuration.APIClient.CallAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
+	httpResponse, err := a.configuration.APIClient.CallAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
 	if err != nil {
 		return {{#returnType}}{{#isListContainer}}*{{/isListContainer}}successPayload, {{/returnType}}NewAPIResponse(httpResponse.RawResponse), err
 	}

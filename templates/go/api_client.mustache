@@ -3,16 +3,80 @@ package {{packageName}}
 
 import (
 	"bytes"
+	"crypto/tls"
 	"fmt"
+	"net/url"
 	"path/filepath"
 	"reflect"
 	"strings"
-	"net/url"
+
 	"github.com/go-resty/resty"
 )
 
+/////////////////////////////////////////////////////////////////////////
+// This should be in another "api main" support file, but that requires updating
+// the codegen GoClient class
+/////////////////////////////////////////////////////////////////////////
+
+
+// Client is the REST handle that should be used for all REST interactions
+// It maintains connections, and login operations. All methods will generally
+// make a query to the REST API server, unless otherwise noted
+type Client struct {
+	Configuration *Configuration
+{{#apiInfo}}{{#apis}}
+	{{baseName}} {{classname}}{{/apis}}{{/apiInfo}}
+}
+
+// NewClient creates a new Clinet object.
+// No queries are performed.
+func NewClient(hostName string, username string, password string, skipTlsVerify bool) *Client {
+	cfg := NewConfiguration()
+	cfg.BasePath = fmt.Sprintf("https://%s/mgmt", hostName)
+	cfg.Password = password
+	cfg.UserName = username
+
+	r := resty.New()
+	r.SetDebug(cfg.debug)
+	r.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: skipTlsVerify})
+	cfg.APIClient.Resty = r
+
+	return &Client{
+		Configuration: cfg,
+{{#apiInfo}}{{#apis}}
+		{{baseName}}: {{classname}}{
+			configuration: cfg,
+		},{{/apis}}{{/apiInfo}}
+	}
+}
+
+// DoLogin performs the remote operations to obtain an auth token from the API server
+func (self *Client) DoLogin() error {
+	res, apires, err := self.Shared.Login(LoginBody{
+		LoginProviderName: "tmos",
+		Password:          self.Configuration.Password,
+		Username:          self.Configuration.UserName,
+	})
+	if err == nil && apires.StatusCode != 200 {
+		err = fmt.Errorf("REST call failed: %v", apires.Status)
+	}
+	if err != nil {
+		return err
+	}
+
+	self.Configuration.APIKey["X-F5-Auth-Token"] = res.Token.Token
+	return nil
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Regular APIClient used by all other classes
+/////////////////////////////////////////////////////////////////////////
+
 type APIClient struct {
-	debug bool
+	Resty *resty.Client
 }
 
 func (c *APIClient) SelectHeaderContentType(contentTypes []string) string {
@@ -54,10 +118,7 @@ func (c *APIClient) CallAPI(path string, method string,
 	fileName string,
 	fileBytes []byte) (*resty.Response, error) {
 
-	//set debug flag
-	resty.SetDebug(c.debug)
-
-	request := prepareRequest(postBody, headerParams, queryParams, formParams, fileName, fileBytes)
+	request := prepareRequest(c.Resty.R(), postBody, headerParams, queryParams, formParams, fileName, fileBytes)
 
 	switch strings.ToUpper(method) {
 	case "GET":
@@ -80,16 +141,16 @@ func (c *APIClient) CallAPI(path string, method string,
 	return nil, fmt.Errorf("invalid method %v", method)
 }
 
-func (c *APIClient) ParameterToString(obj interface{},collectionFormat string) string {
+func (c *APIClient) ParameterToString(obj interface{}, collectionFormat string) string {
 	if reflect.TypeOf(obj).String() == "[]string" {
-		switch	collectionFormat {
+		switch collectionFormat {
 		case "pipes":
 			return strings.Join(obj.([]string), "|")
 		case "ssv":
 			return strings.Join(obj.([]string), " ")
 		case "tsv":
-			return strings.Join(obj.([]string), "\t")	
-		case "csv" :
+			return strings.Join(obj.([]string), "\t")
+		case "csv":
 			return strings.Join(obj.([]string), ",")
 		}
 	}
@@ -97,14 +158,14 @@ func (c *APIClient) ParameterToString(obj interface{},collectionFormat string) s
 	return obj.(string)
 }
 
-func prepareRequest(postBody interface{},
+func prepareRequest(request *resty.Request,
+	postBody interface{},
 	headerParams map[string]string,
 	queryParams url.Values,
 	formParams map[string]string,
 	fileName string,
 	fileBytes []byte) *resty.Request {
 
-	request := resty.R()
 	request.SetBody(postBody)
 
 	// add header parameter, if any
