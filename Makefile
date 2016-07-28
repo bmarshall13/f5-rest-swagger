@@ -22,7 +22,8 @@ build/%-bigip-rest.stamp: build/%-bigip-rest bigip.json Makefile templates/%/*
 	    -o /wkdir/build/$*-bigip-rest/ \
 	    -D packageName=f5api,packageVersion=$(VERS) \
 	    --additional-properties buildInfo='$(BUILD_INFO)'
-	cd build/$*-bigip-rest && git add .
+	if [ "$*" == "go" ]; then cd build/$*-bigip-rest && go fmt *.go; fi
+	cd build/$*-bigip-rest && rm -f git_push.sh pom.xml && git add .
 	touch $@
 
 # Check out the SDK to be updated
