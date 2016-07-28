@@ -13,11 +13,11 @@ clean:
 extra: build/ruby-f5-rest.stamp build/python-f5-rest.stamp build/javascript-f5-rest.stamp
 
 
-build/%-bigip-rest.stamp: build/%-bigip-rest ltm.json Makefile templates/%/*
+build/%-bigip-rest.stamp: build/%-bigip-rest bigip.json Makefile templates/%/*
 	mkdir -p build
 	rm -rf build/$*-bigip-rest/* || true
 	docker run --rm -v $(CURDIR):/wkdir $(CODEGEN_TAG) \
-	    generate -i /wkdir/ltm.json \
+	    generate -i /wkdir/bigip.json \
 	    -l $* -t /wkdir/templates/go \
 	    -o /wkdir/build/$*-bigip-rest/ \
 	    -D packageName=f5api,packageVersion=$(VERS) \
