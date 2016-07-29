@@ -5,7 +5,8 @@ import ({{/imports}}{{#imports}}
 	"{{import}}"{{/imports}}{{#imports}}
 )
 {{/imports}}{{#model}}{{#description}}
-// {{{description}}}{{/description}}
+// {{{description}}}{{/description}}{{^description}}
+// This describes a message sent to or received from some operations{{/description}}
 type {{classname}} struct {
 {{#vars}}{{#description}}
 	// {{{description}}}{{/description}}

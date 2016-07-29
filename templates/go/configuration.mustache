@@ -1,11 +1,12 @@
 {{>partial_header}}
+
 package {{packageName}}
 
 import (
 	"encoding/base64"
 )
 
-type Configuration struct {
+type configuration struct {
 	UserName      string            `json:"userName,omitempty"`
 	Password      string            `json:"password,omitempty"`
 	APIKeyPrefix  map[string]string `json:"APIKeyPrefix,omitempty"`
@@ -20,11 +21,11 @@ type Configuration struct {
 	AccessToken   string            `json:"accessToken,omitempty"`
 	DefaultHeader map[string]string `json:"defaultHeader,omitempty"`
 	UserAgent     string            `json:"userAgent,omitempty"`
-	APIClient     APIClient         `json:"APIClient,omitempty"`
+	restClient     restClient         `json:"restClient,omitempty"`
 }
 
-func NewConfiguration() *Configuration {
-	return &Configuration{
+func newConfiguration() *configuration {
+	return &configuration{
 		BasePath:      "{{{basePath}}}",
 		UserName:      "",
 		debug:         false,
@@ -35,15 +36,15 @@ func NewConfiguration() *Configuration {
 	}
 }
 
-func (c *Configuration) GetBasicAuthEncodedString() string {
+func (c *configuration) getBasicAuthEncodedString() string {
 	return base64.StdEncoding.EncodeToString([]byte(c.UserName + ":" + c.Password))
 }
 
-func (c *Configuration) AddDefaultHeader(key string, value string) {
+func (c *configuration) addDefaultHeader(key string, value string) {
 	c.DefaultHeader[key] = value
 }
 
-func (c *Configuration) GetAPIKeyWithPrefix(APIKeyIdentifier string) string {
+func (c *configuration) getAPIKeyWithPrefix(APIKeyIdentifier string) string {
 	if c.APIKeyPrefix[APIKeyIdentifier] != "" {
 		return c.APIKeyPrefix[APIKeyIdentifier] + " " + c.APIKey[APIKeyIdentifier]
 	}
@@ -51,11 +52,11 @@ func (c *Configuration) GetAPIKeyWithPrefix(APIKeyIdentifier string) string {
 	return c.APIKey[APIKeyIdentifier]
 }
 
-func (c *Configuration) SetDebug(enable bool) {
+func (c *configuration) SetDebug(enable bool) {
 	c.debug = enable
-	c.APIClient.Resty.SetDebug(enable)
+	c.restClient.Resty.SetDebug(enable)
 }
 
-func (c *Configuration) GetDebug() bool {
+func (c *configuration) GetDebug() bool {
 	return c.debug
 }

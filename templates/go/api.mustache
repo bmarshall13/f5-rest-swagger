@@ -1,4 +1,5 @@
 {{>partial_header}}
+
 package {{packageName}}
 
 {{#operations}}
@@ -12,8 +13,9 @@ import (
 {{/imports}}
 )
 
+// This class holds all the API methods for the {{baseName}} API sub tree
 type {{classname}} struct {
-	configuration *Configuration
+	configuration *configuration
 }
 
 func unused_import_hack_{{classname}}() {
@@ -22,13 +24,12 @@ func unused_import_hack_{{classname}}() {
 
 {{#operation}}
 
-/**
- * {{summary}}{{#notes}}
- * {{notes}}{{/notes}}
- *
-{{#allParams}} * @param {{paramName}} {{description}}
-{{/allParams}} * @return {{#returnType}}{{^isListContainer}}*{{/isListContainer}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}
- */
+// {{{nickname}}}
+//
+// {{#summary}}{{summary}}.{{/summary}}{{#notes}}
+// {{notes}}.{{/notes}}{{#allParams}}
+//
+// {{paramName}} is for {{description}}{{/allParams}}.
 func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) ({{#returnType}}{{^isListContainer}}*{{/isListContainer}}{{{returnType}}}, {{/returnType}}*APIResponse, error) {
 
 	var httpMethod = "{{httpMethod}}"
@@ -51,14 +52,14 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 	// authentication ({{name}}) required
 {{#isApiKey}}{{#isKeyInHeader}}
 	// set key with prefix in header
-	headerParams["{{keyParamName}}"] = a.configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
+	headerParams["{{keyParamName}}"] = a.configuration.getAPIKeyWithPrefix("{{keyParamName}}")
 {{/isKeyInHeader}}{{#isKeyInQuery}}
 	// set key with prefix in querystring{{#hasKeyParamName}}
-	queryParams["{{keyParamName}}"] =  a.configuration.GetAPIKeyWithPrefix("{{keyParamName}}")
+	queryParams["{{keyParamName}}"] =  a.configuration.getAPIKeyWithPrefix("{{keyParamName}}")
 {{/hasKeyParamName}}{{/isKeyInQuery}}{{/isApiKey}}{{#isBasic}}
 	// http basic authentication required
 	if a.configuration.UserName != "" || a.configuration.Password != ""{
-		headerParams["Authorization"] =  "Basic " + a.configuration.GetBasicAuthEncodedString()
+		headerParams["Authorization"] =  "Basic " + a.configuration.getBasicAuthEncodedString()
 	}{{/isBasic}}{{#isOAuth}}
 	// oauth required
 	if a.configuration.AccessToken != ""{
@@ -77,11 +78,11 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 			queryParams.Add("{{paramName}}", value)
 		}
 	} else {
-		queryParams.Add("{{paramName}}", a.configuration.APIClient.ParameterToString({{paramName}}, collectionFormat))
+		queryParams.Add("{{paramName}}", a.configuration.restClient.parameterToString({{paramName}}, collectionFormat))
 	}
 	{{/isListContainer}}
 	{{^isListContainer}}
-		queryParams.Add("{{paramName}}", a.configuration.APIClient.ParameterToString({{paramName}}, ""))
+		queryParams.Add("{{paramName}}", a.configuration.restClient.parameterToString({{paramName}}, ""))
 	{{/isListContainer}}
 	{{/queryParams}}{{/hasQueryParams}}
 
@@ -92,7 +93,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 {{/consumes}}	}
 
 	// set Content-Type header
-	localVarHttpContentType := a.configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
+	localVarHttpContentType := a.configuration.restClient.selectHeaderContentType(localVarHttpContentTypes)
 	if localVarHttpContentType != "" {
 		headerParams["Content-Type"] = localVarHttpContentType
 	}
@@ -102,7 +103,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 {{/produces}}	}
 
 	// set Accept header
-	localVarHttpHeaderAccept := a.configuration.APIClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
+	localVarHttpHeaderAccept := a.configuration.restClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}{{#hasHeaderParams}}
@@ -119,7 +120,7 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 	postBody = &{{paramName}}
 {{/bodyParams}}{{/hasBodyParam}}
 {{#returnType}}	var successPayload = new({{returnType}}){{/returnType}}
-	httpResponse, err := a.configuration.APIClient.CallAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
+	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
 	if err != nil {
 		return {{#returnType}}{{#isListContainer}}*{{/isListContainer}}successPayload, {{/returnType}}NewAPIResponse(httpResponse.RawResponse), err
 	}
