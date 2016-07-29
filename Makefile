@@ -3,7 +3,10 @@
 CODEGEN_TAG:=swagger-codegen:latest
 VERS:=$(shell git describe --dirty=-dirty || echo "devel")
 BUILD_INFO:=Codegen IMG: $(shell docker images -q $(CODEGEN_TAG))
-GITPREFIX?=https://github.com/f5devcentral/
+
+REPO_BASE?=github.com/f5devcentral
+GOIMPORT?=$(REPO_BASE)/go-bigip-rest
+GITPREFIX?=https://$(REPO_BASE)/
 
 all: build/go-bigip-rest.stamp
 
@@ -21,7 +24,7 @@ build/%-bigip-rest.stamp: build/%-bigip-rest bigip.json Makefile templates/%/*
 	    -l $* -t /wkdir/templates/go \
 	    -o /wkdir/build/$*-bigip-rest/ \
 	    -D packageName=f5api,packageVersion=$(VERS) \
-	    --additional-properties buildInfo='$(BUILD_INFO)'
+	    --additional-properties buildInfo='$(BUILD_INFO),goImportPath=$(GOIMPORT)'
 	if [ "$*" == "go" ]; then cd build/$*-bigip-rest && go fmt *.go; fi
 	cd build/$*-bigip-rest && rm -f git_push.sh pom.xml && git add .
 	touch $@

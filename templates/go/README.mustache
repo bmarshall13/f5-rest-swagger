@@ -17,46 +17,54 @@ For more information, please visit [{{{infoUrl}}}]({{{infoUrl}}})
 {{/infoUrl}}
 
 ## Installation
-Put the package under your project folder and add the following in import:
+Install the package into your project dir
 ```
-    "./{{packageName}}"
+go get {{goImportPath}}
+```
+
+## Example
+Here is a simple example to list virtual servers:
+```go
+package main
+
+import (
+	"flag"
+	"fmt"
+	"{{goImportPath}}"
+)
+
+func main() {
+	user := flag.String("user", "admin", "username on BIG-IP")
+	pass := flag.String("pass", "admin", "password on BIG-IP")
+	tlsNoVerify := flag.Bool("skipTlsVerify", false, "Don't verifiy BigIP certificate")
+	flag.Parse()
+	if flag.NArg() != 1 {
+		panic(fmt.Sprintf("Usage: f5api [--user USER] [--pass PASS] [--skipTlsVerify] <bigip>\n"))
+	}
+	host := flag.Arg(0)
+
+	fmt.Printf("Connecting to BIG-IP %v (%v/%v)\n", host, *user, *pass)
+
+	f5 := {{packageName}}.NewClient(host, *user, *pass, *tlsNoVerify)
+	err := f5.DoLogin()
+	if err != nil {
+		panic(fmt.Sprintf("Error logging in: %v", err))
+	}
+
+	// Example: list all the virtuals (compare to "show /ltm virtual")
+	virtuals, _, err := f5.Ltm.GetVirtualList()
+	for _, virtual := range virtuals.Items {
+		fmt.Printf("Virtual %v Destination %v\n", virtual.Name, virtual.Destination)
+	}
+}
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *{{basePath}}*
+Operations are grouped by the first API path element:
+{{#apiInfo}}{{#apis}}
+ - {{baseName}} operations are grouped in the [**{{packageName}}.{{classname}}**]({{apiDocPath}}{{classname}}.md){{/apis}}{{/apiInfo}}
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-{{#apiInfo}}{{#apis}}{{#operations}}{{#operation}}*{{classname}}* | [**{{operationId}}**]({{apiDocPath}}{{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{#summary}}{{summary}}{{/summary}}
-{{/operation}}{{/operations}}{{/apis}}{{/apiInfo}}
-
-## Documentation For Models
-
-{{#models}}{{#model}} - [{{{classname}}}]({{modelDocPath}}{{{classname}}}.md)
-{{/model}}{{/models}}
-
-## Documentation For Authorization
-
-{{^authMethods}} All endpoints do not require authorization.
-{{/authMethods}}{{#authMethods}}{{#last}} Authentication schemes defined for the API:{{/last}}{{/authMethods}}
-{{#authMethods}}## {{{name}}}
-
-{{#isApiKey}}- **Type**: API key 
-- **API key parameter name**: {{{keyParamName}}}
-- **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
-{{/isApiKey}}
-{{#isBasic}}- **Type**: HTTP basic authentication
-{{/isBasic}}
-{{#isOAuth}}- **Type**: OAuth
-- **Flow**: {{{flow}}}
-- **Authorizatoin URL**: {{{authorizationUrl}}}
-- **Scopes**: {{^scopes}}N/A{{/scopes}}
-{{#scopes}} - **{{{scope}}}**: {{{description}}}
-{{/scopes}}
-{{/isOAuth}}
-
-{{/authMethods}}
 
 ## Author
 
