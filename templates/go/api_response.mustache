@@ -4,21 +4,54 @@ package {{packageName}}
 
 import (
 	"net/http"
+	"fmt"
+	"encoding/json"
+
+	"github.com/go-resty/resty"
 )
 
-type APIResponse struct {
-	*http.Response
-	Message string `json:"message,omitempty"`
+type ResponseNot200Error struct {
+	msg string
+	ApiResp interface{}
+	HttpResp *http.Response
 }
 
-func NewAPIResponse(r *http.Response) *APIResponse {
-
-	response := &APIResponse{Response: r}
-	return response
+func (e ResponseNot200Error) Error() string {
+	return e.msg
 }
 
-func NewAPIResponseWithError(errorMessage string) *APIResponse {
+func ErrorIsNotFound(err error) bool {
+	switch t := err.(type) {
+		case ResponseNot200Error:
+			if t.HttpResp.StatusCode == 404 {
+				return true
+			}
+	}
+	return false
+}
 
-	response := &APIResponse{Message: errorMessage}
-	return response
+
+func NewAPIResponse(r *resty.Response, err error) error {
+	// FIXME: This is hard-coded to the current F5 API spec. Use the spec's
+	// listed response types.
+  if err == nil && r.StatusCode() != 200 {
+    apiError := &ErrorModel{}
+    err := json.Unmarshal(r.Body(), apiError)
+    if err == nil {
+      retError := ResponseNot200Error{
+        msg:     fmt.Sprintf("Server returned error %d: %v", apiError.Code, apiError.Message),
+        HttpResp: r.RawResponse,
+        ApiResp:  apiError,
+      }
+			return error(retError)
+    } else {
+      retError := ResponseNot200Error{
+        msg:     fmt.Sprintf("Server returned HTTP status: %v", r.Status()),
+        HttpResp: r.RawResponse,
+      }
+			return error(retError)
+    }
+  }
+
+	return err
 }

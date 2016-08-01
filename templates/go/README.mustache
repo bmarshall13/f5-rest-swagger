@@ -1,3 +1,7 @@
+:warning: **Unreleased, and under development**  :warning:
+
+This is a work in progress to define the BigIP REST api in swagger, and use swagger-codegen to produce a library. 
+
 # Go API client for {{packageName}}
 
 {{#appDescription}}
@@ -52,7 +56,10 @@ func main() {
 	}
 
 	// Example: list all the virtuals (compare to "show /ltm virtual")
-	virtuals, _, err := f5.Ltm.GetVirtualList()
+	virtuals, err := f5.Ltm.GetVirtualList()
+	if err != nil {
+		panic(fmt.Sprintf("Error getting list of virtual servers: %v", err))
+	}
 	for _, virtual := range virtuals.Items {
 		fmt.Printf("Virtual %v Destination %v\n", virtual.Name, virtual.Destination)
 	}

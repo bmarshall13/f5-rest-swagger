@@ -29,7 +29,7 @@ func unused_import_hack_{{classname}}() {
 // {{notes}}.{{/notes}}{{#allParams}}
 //
 // {{paramName}} is for {{description}}{{/allParams}}.
-func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) ({{#returnType}}{{^isListContainer}}*{{/isListContainer}}{{{returnType}}}, {{/returnType}}*APIResponse, error) {
+func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) {{#returnType}}({{^isListContainer}}*{{/isListContainer}}{{{returnType}}}, error){{/returnType}}{{^returnType}}error{{/returnType}} {
 
 	var httpMethod = "{{httpMethod}}"
 	// create path and map variables
@@ -122,13 +122,19 @@ func (a {{{classname}}}) {{{nickname}}}({{#allParams}}{{paramName}} {{{dataType}
 {{#bodyParams}}	// body params
 	postBody = &{{paramName}}
 {{/bodyParams}}{{/hasBodyParam}}
-{{#returnType}}	var successPayload = new({{returnType}}){{/returnType}}
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return {{#returnType}}{{#isListContainer}}*{{/isListContainer}}successPayload, {{/returnType}}NewAPIResponse(httpResponse.RawResponse), err
-	}
 {{#returnType}}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload){{/returnType}}
-	return {{#returnType}}{{#isListContainer}}*{{/isListContainer}}successPayload, {{/returnType}}NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new({{returnType}})
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
+	}
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return {{#isListContainer}}*{{/isListContainer}}successPayload, err
+	}{{/returnType}}{{^returnType}}
+	return NewAPIResponse(httpResponse, err){{/returnType}}
+
 }
 {{/operation}}{{/operations}}

@@ -18,7 +18,10 @@ func Example() {
 	}
 
 	// Example: list all the virtuals (compare to "show /ltm virtual")
-	virtuals, _, err := f5.Ltm.GetVirtualList()
+	virtuals, err := f5.Ltm.GetVirtualList()
+	if err != nil {
+		panic(fmt.Sprintf("Error getting list of virtual servers: %v", err))
+	}
 	for _, virtual := range virtuals.Items {
 		fmt.Printf("Virtual %v Destination %v\n", virtual.Name, virtual.Destination)
 	}

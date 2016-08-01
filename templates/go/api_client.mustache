@@ -61,14 +61,11 @@ func NewClient(hostName string, username string, password string, skipTlsVerify 
 
 // DoLogin performs the remote operations to obtain an auth token from the API server
 func (self *Client) DoLogin() error {
-	res, apires, err := self.Shared.Login(LoginBody{
+	res, err := self.Shared.Login(LoginBody{
 		LoginProviderName: "tmos",
 		Password:          self.configuration.Password,
 		Username:          self.configuration.UserName,
 	})
-	if err == nil && apires.StatusCode != 200 {
-		err = fmt.Errorf("REST call failed: %v", apires.Status)
-	}
 	if err != nil {
 		return err
 	}
