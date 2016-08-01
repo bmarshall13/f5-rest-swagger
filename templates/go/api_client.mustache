@@ -164,7 +164,7 @@ func (c *restClient) parameterToString(obj interface{}, collectionFormat string)
 		}
 	}
 
-	return obj.(string)
+	return fmt.Sprintf("%v", obj)
 }
 
 func prepareRequest(request *resty.Request,
